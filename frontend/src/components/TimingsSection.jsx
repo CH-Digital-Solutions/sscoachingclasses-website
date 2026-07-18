@@ -1,4 +1,3 @@
-
 import { FaClock, FaSun, FaMoon } from 'react-icons/fa';
 
 const batches = [
@@ -9,21 +8,20 @@ const batches = [
 
 export default function TimingsSection() {
   return (
-    <section className="timings section" id="timings">
-      <div className="container">
-        <div className="timings-header">
-          <span className="section-label">Batch Timings</span>
-          <h2 className="section-title">Class <span className="accent-text">Schedule</span></h2>
-          <p className="section-subtitle">Flexible batch timings designed to fit every student's routine.</p>
+    <section className="timings-sec section" id="timings">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="eyebrow">Batch Timings</span>
+          <h2 className="section-head__title">Class <em>Schedule</em></h2>
         </div>
         <div className="timings-grid">
           {batches.map((b, i) => (
             <div key={i} className="timing-card">
-              <div className="timing-icon">{b.icon}</div>
-              <h3>{b.shift}</h3>
-              <p className="timing-time">{b.time}</p>
-              <p className="timing-days">{b.days}</p>
-              <span className="timing-classes">{b.classes}</span>
+              <div className="timing-card__icon">{b.icon}</div>
+              <h3 className="timing-card__shift">{b.shift}</h3>
+              <p className="timing-card__time">{b.time}</p>
+              <p className="timing-card__days">{b.days}</p>
+              <span className="timing-card__classes">{b.classes}</span>
             </div>
           ))}
         </div>

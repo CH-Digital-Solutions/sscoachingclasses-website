@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { FaCalendarAlt, FaGlobe, FaTrophy, FaUsers } from 'react-icons/fa';
 
 const stats = [
-  { icon: <FaCalendarAlt />, value: 18, suffix: '+', label: 'YEARS OF EXCELLENCE' },
-  { icon: <FaGlobe />, value: 3, suffix: '', label: 'LANGUAGE MEDIUMS' },
-  { icon: <FaTrophy />, value: 200, suffix: '+', label: 'TOP BOARD SCORERS' },
-  { icon: <FaUsers />, value: 35, suffix: '', label: 'STUDENTS / BATCH' },
+  { icon: <FaCalendarAlt />, value: 18, suffix: '+', label: 'Years of Excellence' },
+  { icon: <FaGlobe />, value: 3, suffix: '', label: 'Language Mediums' },
+  { icon: <FaTrophy />, value: 200, suffix: '+', label: 'Top Board Scorers' },
+  { icon: <FaUsers />, value: 35, suffix: '', label: 'Students / Batch' },
 ];
 
 function AnimatedNumber({ target, suffix }) {
@@ -31,22 +31,21 @@ function AnimatedNumber({ target, suffix }) {
     return () => observer.disconnect();
   }, [target]);
 
-  return <span ref={ref} className="stat-number">{count}{suffix}</span>;
+  return <span ref={ref} className="hero__stat-val">{count}{suffix}</span>;
 }
 
 export default function StatsBar() {
   return (
-    <section className="stats-bar">
-      <div className="container stats-grid">
-        {stats.map((s, i) => (
-          <div key={i} className="stat-item">
-            <div>
-              <AnimatedNumber target={s.value} suffix={s.suffix} />
-              <span className="stat-label">{s.label}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="hero__stats">
+      {stats.map((s, i) => (
+        <div key={i} className="hero__stat">
+          <span className="hero__stat-icon">{s.icon}</span>
+          <span className="hero__stat-text">
+            <AnimatedNumber target={s.value} suffix={s.suffix} />
+            <span className="hero__stat-lbl">{s.label}</span>
+          </span>
+        </div>
+      ))}
+    </div>
   );
 }

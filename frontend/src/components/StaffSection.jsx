@@ -1,5 +1,3 @@
-
-// Fallback avatar (stylized) shown until a real photo file exists in /public/staff/.
 const fallbackAvatar = (seed) =>
   `https://api.dicebear.com/9.x/personas/svg?seed=${encodeURIComponent(seed)}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffdfbf`;
 
@@ -14,12 +12,11 @@ const staff = [
 
 export default function StaffSection() {
   return (
-    <section className="staff section" id="staff">
-      <div className="container">
-        <div className="staff-header">
-          <span className="section-label">Our Team</span>
-          <h2 className="section-title">Meet Our <span className="accent-text italic-accent">Expert Faculty</span></h2>
-          <p className="section-subtitle">Dedicated educators who go beyond the syllabus to shape future leaders.</p>
+    <section className="staff-sec section" id="staff">
+      <div className="wrap">
+        <div className="section-head">
+          <span className="eyebrow">Our Team</span>
+          <h2 className="section-head__title">Meet Our <em>Expert Faculty</em></h2>
         </div>
         <div className="staff-grid">
           {staff.map((s, i) => (

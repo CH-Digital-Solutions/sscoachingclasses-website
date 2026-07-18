@@ -1,30 +1,57 @@
-import { programs } from '../data/programs';
-import { FaArrowRight } from 'react-icons/fa';
+import { programs, academicChips } from '../data/programs';
+import { FaArrowRight, FaCheck } from 'react-icons/fa';
 
 export default function ProgramsSection({ onEnquire }) {
   return (
-    <section className="programs section" id="programs">
-      <div className="container">
-        <div className="programs-header">
-          <span className="section-label">Our Programs</span>
-          <h2 className="section-title">Academic Programs <span className="accent-text italic-accent">for Every Level</span></h2>
-          <p className="section-subtitle">Comprehensive coaching from school to university — in your preferred language.</p>
+    <>
+      <section className="chips-sec" id="everything-we-teach">
+        <div className="grid-pattern" />
+        <div className="wrap">
+          <div className="section-head">
+            <span className="eyebrow">Everything We Teach</span>
+            <h2 className="section-head__title">Everything We <em>Teach</em></h2>
+          </div>
+          <div className="chips-grid">
+            {academicChips.map((c, i) => (
+              <span key={i} className="chip"><span className="chip__icon"><FaCheck /></span>{c.label}</span>
+            ))}
+          </div>
         </div>
-        <div className="programs-grid">
-          {programs.map(p => (
-            <div key={p.id} className={`program-card${p.highlighted ? ' highlighted' : ''}`}>
-              <span className="program-icon">{p.icon}</span>
-              <h3>{p.title}</h3>
-              <p className="program-sub">{p.subtitle}</p>
-              <p className="program-desc">{p.description}</p>
-              <ul className="program-features">
-                {p.features.map((f, i) => <li key={i}>{f}</li>)}
-              </ul>
-              <button className="btn btn-primary program-cta" onClick={onEnquire}>Enquire Now <FaArrowRight style={{marginLeft: '8px'}} /></button>
+      </section>
+
+      <section className="courses-sec" id="programs">
+        <div className="wrap">
+          <div className="courses-header">
+            <div className="courses-header__left">
+              <span className="eyebrow">Our Programs</span>
+              <h2 className="courses-header__title">Academic Programs <em>for Every Level</em></h2>
             </div>
-          ))}
+          </div>
+
+          <div className="courses-list">
+            {programs.map((p, i) => (
+              <div key={p.id} className={`prog-card${p.highlighted ? ' prog-card--highlight' : ''}`}>
+                <div className="prog-card__top">
+                  <span className="prog-card__icon">{p.icon}</span>
+                  <span className="prog-card__tag">{p.subtitle}</span>
+                </div>
+                <div className="prog-card__main">
+                  <h3 className="prog-card__title">{p.title}</h3>
+                  <p className="prog-card__desc">{p.description}</p>
+                  <ul className="prog-card__list">
+                    {p.features.map((f, j) => (
+                      <li key={j}><span className="prog-check"><FaCheck /></span>{f}</li>
+                    ))}
+                  </ul>
+                  <div className="prog-card__actions">
+                    <button className="btn btn--primary" onClick={onEnquire}>Enquire Now <FaArrowRight /></button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { FaTimes, FaGraduationCap, FaCheckCircle, FaArrowRight, FaClock } from 'react-icons/fa';
 
 export default function BookDemoModal({ isOpen, onClose }) {
   const [form, setForm] = useState({ name: '', phone: '', program: 'School Section (7th to 10th)' });
@@ -19,26 +19,44 @@ export default function BookDemoModal({ isOpen, onClose }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={e => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>✕</button>
-        <div className="modal-header">
-          <span className="modal-badge">ADMISSIONS 2026–27</span>
-          <h2>Book Your Free Demo</h2>
-          <p>Fill in your details – a counsellor will call you back to schedule a free demo class.</p>
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="modal__head">
+          <div className="grid-pattern" />
+          <button className="modal__close" onClick={onClose} aria-label="Close"><FaTimes /></button>
+          <span className="modal__eyebrow">Admissions 2026–27</span>
+          <h2 className="modal__title"><FaGraduationCap style={{ marginRight: '.5rem' }} />Book Your Free Demo</h2>
+          <p className="modal__lead">Fill in your details – a counsellor will call you back to schedule a free demo class.</p>
         </div>
-        <form className="modal-form" onSubmit={handleSubmit}>
-          <label>STUDENT NAME<input type="text" placeholder="Full name" required value={form.name} onChange={e => setForm({...form, name: e.target.value})} /></label>
-          <label>PHONE NUMBER<input type="tel" placeholder="+91 XXXXX XXXXX" required value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} /></label>
-          <label>PROGRAM
-            <select value={form.program} onChange={e => setForm({...form, program: e.target.value})}>
-              <option>School Section (7th to 10th)</option>
-              <option>College Section (11th & 12th)</option>
-              <option>Degree Section (B.Com, BAF, BMS)</option>
-            </select>
-          </label>
-          <button type="submit" className="btn btn-primary modal-submit">{submitted ? '✓ Request Sent!' : 'Request Free Consultation ↗'}</button>
-          <p className="modal-note">🕐 No obligation · We reply within 24 hours</p>
-        </form>
+        <div className="modal__body">
+          {submitted ? (
+            <div className="cf-success">
+              <FaCheckCircle style={{ fontSize: '2rem', color: 'var(--primary)', marginBottom: '.75rem' }} />
+              <h4>Request Sent!</h4>
+              <p>We'll reach out to you within 24 hours.</p>
+            </div>
+          ) : (
+            <form className="modal__form" onSubmit={handleSubmit}>
+              <div className="field">
+                <label className="field__label">Student Name</label>
+                <input className="field__input" type="text" placeholder="Full name" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+              </div>
+              <div className="field">
+                <label className="field__label">Phone Number</label>
+                <input className="field__input" type="tel" placeholder="+91 XXXXX XXXXX" required value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} />
+              </div>
+              <div className="field">
+                <label className="field__label">Program</label>
+                <select className="field__select" value={form.program} onChange={e => setForm({ ...form, program: e.target.value })}>
+                  <option>School Section (7th to 10th)</option>
+                  <option>College Section (11th & 12th)</option>
+                  <option>Degree Section (B.Com, BAF, BMS)</option>
+                </select>
+              </div>
+              <button type="submit" className="btn btn--primary">Request Free Consultation <FaArrowRight /></button>
+              <p className="modal__note"><FaClock /> No obligation · We reply within 24 hours</p>
+            </form>
+          )}
+        </div>
       </div>
     </div>
   );

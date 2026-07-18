@@ -1,19 +1,36 @@
-import { FaChalkboardTeacher } from 'react-icons/fa';
-
 export default function FounderSection() {
   return (
-    <section className="founder section" id="about">
-      <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
-        <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '24px' }}>
-          Welcome to <span className="accent-text">SS Coaching Classes</span>
-        </h2>
-        <p style={{ fontSize: '1.25rem', color: 'var(--color-dark)', lineHeight: '1.8', marginBottom: '32px', fontWeight: '500' }}>
-          At SS Coaching Classes, your child’s future is an intrinsic part of our collective vision. For over 15 years, we have been striving to achieve the perfect balance between knowledge & wisdom, between individual attention & collective growth; just to shape your child into leaders of tomorrow.
-        </p>
-        <p style={{ fontSize: '1.1rem', color: 'var(--color-text)', lineHeight: '1.7', marginBottom: '40px' }}>
-          Today we are recognized as a premium coaching institute for SSC, HSC, Commerce, Science & Degree programs. The environment we provide and the non-academic interventions we make are all a product of our commitment to the student’s overall academic improvement. We truly believe that, at our very core, SS Coaching Classes is a family!
-        </p>
+    <section className="founder-sec section" id="about">
+      <div className="wrap">
+        <div className="founder-grid">
+          <div className="founder-media">
+            <div className="founder-img-wrapper">
+              <div className="founder-bg-shape" />
+              <img src="/SS Logo.svg" alt="SS Coaching Classes" className="founder-img" />
+            </div>
+          </div>
 
+          <div className="founder-content">
+            <span className="eyebrow">From the desk of the Founder</span>
+            <h2 className="section-head__title" style={{ textAlign: 'left', whiteSpace: 'normal', marginBottom: '1.25rem' }}>
+              Welcome to <span style={{ color: 'var(--primary)' }}>SS Coaching Classes</span>
+            </h2>
+            <div className="founder-text">
+              <p>
+                At SS Coaching Classes, your child's future is an intrinsic part of our collective vision.
+                For over 15 years, we have been striving to achieve the perfect balance between
+                <strong> knowledge &amp; wisdom</strong>, between individual attention &amp; collective growth —
+                just to shape your child into leaders of tomorrow.
+              </p>
+              <p>
+                Today we are recognized as a premium coaching institute for SSC, HSC, Commerce, Science &amp;
+                Degree programs. The environment we provide and the non-academic interventions we make are all
+                a product of our commitment to the student's overall academic improvement. We truly believe that,
+                at our very core, <strong>SS Coaching Classes is a family!</strong>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

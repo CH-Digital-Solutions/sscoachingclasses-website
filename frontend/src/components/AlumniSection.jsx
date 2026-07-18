@@ -1,22 +1,23 @@
 import { alumni } from '../data/alumni';
 
-
 export default function AlumniSection() {
   return (
-    <section className="alumni section">
-      <div className="container">
-        <div className="alumni-header">
-          <span className="section-label">Alumni Network</span>
-          <h2 className="section-title">Our Successful <span className="accent-text italic-accent">Alumni</span></h2>
-          <p className="section-subtitle">From our classrooms to the world — meet achievers we're proud of.</p>
+    <section className="alumni-sec section" id="alumni">
+      <div className="alumni-bg-pattern" />
+      <div className="wrap relative-z">
+        <div className="section-head">
+          <span className="eyebrow">Alumni Network</span>
+          <h2 className="section-head__title">Our Successful <em>Alumni</em></h2>
         </div>
         <div className="alumni-grid">
           {alumni.map((a, i) => (
             <div key={i} className="alumni-card">
-              <span className="alumni-icon">{a.icon}</span>
-              <h4>{a.career}</h4>
-              <p className="alumni-name">{a.name}</p>
-              <span className="alumni-batch">{a.batch}</span>
+              <span className="alumni-icon-wrap">{a.icon}</span>
+              <div className="alumni-info">
+                <span className="alumni-name">{a.name}</span>
+                <span className="alumni-profession">{a.career}</span>
+                <span className="alumni-meta">{a.batch}</span>
+              </div>
             </div>
           ))}
         </div>

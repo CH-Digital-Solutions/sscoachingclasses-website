@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
+import { FaQuoteRight, FaStar } from 'react-icons/fa';
 import { testimonials, googleRating } from '../data/testimonials';
-
 
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
@@ -11,37 +11,40 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="testimonials section" id="reviews">
-      <div className="container">
-        <div className="testimonials-header">
-          <span className="section-label">Reviews</span>
-          <h2 className="section-title">What Parents & Students <span className="accent-text italic-accent">Say</span></h2>
-          <div className="google-rating">
-            <div className="rating-stars">{'★'.repeat(5)}</div>
-            <span className="rating-score">{googleRating.score}</span>
-            <span className="rating-count">Based on {googleRating.totalReviews} Google Reviews</span>
+    <section className="rev-sec section" id="reviews">
+      <div className="wrap">
+        <div className="rev-head">
+          <div>
+            <span className="eyebrow">Reviews</span>
+            <h2 className="rev-title">What Parents &amp; Students <em>Say</em></h2>
+            <div className="rev-summary">
+              <span className="rev-summary__score">{googleRating.score}</span>
+              <span className="rev-summary__stars">{Array.from({ length: 5 }).map((_, i) => <FaStar key={i} />)}</span>
+              <span className="rev-summary__count">Based on {googleRating.totalReviews} Google Reviews</span>
+            </div>
           </div>
         </div>
-        <div className="testimonials-carousel">
-          <div className="testimonials-track" style={{ transform: `translateX(-${current * 100}%)` }}>
-            {testimonials.map((t, i) => (
-              <div key={i} className="testimonial-card">
-                <div className="testimonial-stars">{'★'.repeat(t.rating)}</div>
-                <p className="testimonial-quote">"{t.quote}"</p>
-                <div className="testimonial-author">
-                  <div className="author-avatar">{t.name[0]}</div>
-                  <div>
-                    <strong>{t.name}</strong>
-                    <span>{t.role}</span>
-                  </div>
+
+        <div className="rev-track">
+          {testimonials.map((t, i) => (
+            <div key={i} className="rev-card">
+              <FaQuoteRight className="rev-card__quote-mark" />
+              <div className="rev-card__stars">{Array.from({ length: t.rating }).map((_, j) => <FaStar key={j} />)}</div>
+              <p className="rev-card__text">"{t.quote}"</p>
+              <div className="rev-card__author">
+                <div className="rev-card__avatar">{t.name[0]}</div>
+                <div>
+                  <span className="rev-card__name">{t.name}</span>
+                  <span className="rev-card__role">{t.role}</span>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-        <div className="testimonials-dots">
+
+        <div className="rev-dots">
           {testimonials.map((_, i) => (
-            <span key={i} className={`t-dot${i === current ? ' active' : ''}`} onClick={() => setCurrent(i)} />
+            <button key={i} className={`rev-dot${i === current ? ' active' : ''}`} onClick={() => setCurrent(i)} aria-label={`Go to review ${i + 1}`} />
           ))}
         </div>
       </div>

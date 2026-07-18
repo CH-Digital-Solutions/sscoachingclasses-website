@@ -1,49 +1,54 @@
-
-import { FaInstagram, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container footer-grid">
-        <div className="footer-brand">
-          <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" style={{ height: '56px', width: 'auto', background: '#fff', padding: '4px', borderRadius: '4px' }} />
-            <span style={{ fontFamily: '"Inter", sans-serif', fontSize: '1.6rem', fontWeight: '900', color: '#fff', letterSpacing: '0px' }}>SS Classes</span>
+      <div className="wrap">
+        <div className="footer-grid">
+          <div className="footer-brand-col">
+            <a href="#home" className="footer-logo">
+              <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" className="footer-logo__img" />
+              <span className="footer-logo-name">SS CLASSES</span>
+            </a>
+            <p className="footer-tagline">Nurturing curious minds since 2008. Hindi, Urdu & English medium coaching for SSC, HSC & Degree.</p>
+            <div className="footer-socials">
+              <a href="https://www.instagram.com/sscoachingclasses" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://youtube.com/@sscoachingclasses" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="YouTube"><FaYoutube /></a>
+            </div>
           </div>
-          <p className="footer-tagline">Nurturing curious minds since 2008. Hindi, Urdu & English medium coaching for SSC, HSC & Degree.</p>
-          <div className="footer-socials">
-            <a href="https://www.instagram.com/sscoachingclasses" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-            <a href="https://youtube.com/@sscoachingclasses" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
+
+          <div className="footer-col">
+            <h4 className="footer-heading">Quick Links</h4>
+            <div className="footer-links">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#programs">Programs</a>
+              <a href="#results">Results</a>
+              <a href="#faq">FAQ</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <div className="footer-col">
+            <h4 className="footer-heading">Programs</h4>
+            <div className="footer-links">
+              <a href="#programs">SSC (7th–10th)</a>
+              <a href="#programs">HSC (11th–12th)</a>
+              <a href="#programs">B.Com / BAF / BMS</a>
+            </div>
+          </div>
+
+          <div className="footer-col">
+            <h4 className="footer-heading">Contact</h4>
+            <div className="footer-links">
+              <p><FaMapMarkerAlt /> Govandi West, Mumbai – 400043</p>
+              <a href="tel:+919221105658"><FaPhoneAlt /> +91 92211 05658</a>
+              <a href="mailto:info@sscoachingclasses.in"><FaEnvelope /> info@sscoachingclasses.in</a>
+            </div>
           </div>
         </div>
-        <div className="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#results">Results</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div className="footer-links">
-          <h4>Programs</h4>
-          <ul>
-            <li><a href="#programs">SSC (7th–10th)</a></li>
-            <li><a href="#programs">HSC (11th–12th)</a></li>
-            <li><a href="#programs">B.Com / BAF / BMS</a></li>
-          </ul>
-        </div>
-        <div className="footer-contact">
-          <h4>Contact</h4>
-          <p><FaMapMarkerAlt /> Govandi West, Mumbai – 400043</p>
-          <p><FaPhone /> <a href="tel:+919221105658">+91 92211 05658</a></p>
-          <p><FaEnvelope /> <a href="mailto:info@sscoachingclasses.in">info@sscoachingclasses.in</a></p>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <div className="container">
+
+        <div className="footer-bottom">
           <p>© {new Date().getFullYear()} SS Coaching Classes. All rights reserved.</p>
         </div>
       </div>

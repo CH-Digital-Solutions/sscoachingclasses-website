@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-
+import { FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Programs', href: '#programs' },
+  { label: 'Results', href: '#results' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
@@ -20,40 +21,57 @@ export default function Navbar({ onEnrolClick }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  return (
-    <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
-      <div className="navbar-inner container">
-        <a href="#home" className="navbar-brand" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" style={{ height: '48px', width: 'auto' }} />
-          <span style={{ fontFamily: '"Inter", sans-serif', fontSize: '1.4rem', fontWeight: '900', color: '#000', letterSpacing: '0px' }}>SS Classes</span>
-        </a>
+  const Brand = () => (
+    <a href="#home" className="nav__brand" onClick={() => setMenuOpen(false)}>
+      <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" className="nav__logo-img" />
+      <span className="nav__logo-text">
+        <span className="nav__logo-name">SS CLASSES</span>
+        <span className="nav__logo-sub">COACHING CLASSES</span>
+      </span>
+    </a>
+  );
 
-        <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
+  return (
+    <nav className={`nav${scrolled ? ' nav--solid' : ''}`}>
+      <div className="nav__row wrap">
+        <Brand />
+
+        <ul className="nav__links">
           {navLinks.map(l => (
-            <li key={l.href}>
-              <a href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</a>
-            </li>
+            <li key={l.href}><a href={l.href} className="nav__link">{l.label}</a></li>
           ))}
-          <li className="nav-mobile-cta">
-            <button className="btn btn-primary" onClick={() => { onEnrolClick(); setMenuOpen(false); }}>
-              Enrol Now
-            </button>
-          </li>
         </ul>
 
-        <div className="nav-right">
-          <a href="tel:+919221105658" className="nav-phone">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +91 92211 05658
+        <div className="nav__right">
+          <a href="tel:+919221105658" className="nav__phone">
+            <FaPhoneAlt /> +91 92211 05658
           </a>
-          <button className="btn btn-primary nav-enrol" onClick={onEnrolClick}>Enrol Now</button>
+          <button className="btn btn--primary btn--sm nav__cta" onClick={onEnrolClick}>Enrol Now</button>
+          <button className="nav__hamburger" onClick={() => setMenuOpen(true)} aria-label="Open menu">
+            <FaBars />
+          </button>
         </div>
-
-        <button className={`hamburger${menuOpen ? ' active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-          <span /><span /><span />
-        </button>
       </div>
-      {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)} />}
+
+      {menuOpen && (
+        <div className="nav__mobile">
+          <div className="nav__mobile-header">
+            <Brand />
+            <button className="nav__hamburger" onClick={() => setMenuOpen(false)} aria-label="Close menu">
+              <FaTimes />
+            </button>
+          </div>
+          <div className="nav__mobile-links">
+            {navLinks.map(l => (
+              <a key={l.href} href={l.href} className="nav__mobile-link" onClick={() => setMenuOpen(false)}>{l.label}</a>
+            ))}
+          </div>
+          <div className="nav__mobile-actions">
+            <a href="tel:+919221105658" className="btn btn--outline"><FaPhoneAlt /> +91 92211 05658</a>
+            <button className="btn btn--primary" onClick={() => { onEnrolClick(); setMenuOpen(false); }}>Enrol Now</button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

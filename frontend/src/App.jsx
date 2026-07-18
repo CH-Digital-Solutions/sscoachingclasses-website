@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import StatsBar from './components/StatsBar';
 import FounderSection from './components/FounderSection';
-
+import EnglishSpeakingCourseSection from './components/EnglishSpeakingCourseSection';
 
 import MiddleBanner from './components/MiddleBanner';
 import ProgramsSection from './components/ProgramsSection';
@@ -29,10 +28,9 @@ export default function App() {
     <>
       <Navbar onEnrolClick={openModal} />
       <main>
-        <div className="hero-stats-wrap">
-          <HeroSection onBookDemo={openModal} />
-          <StatsBar />
-        </div>
+        <HeroSection onBookDemo={openModal} />
+        <EnglishSpeakingCourseSection onEnquire={openModal} />
+        <BranchesSection />
         <FounderSection />
 
 
@@ -44,7 +42,6 @@ export default function App() {
         <LimitedSeatsBanner onBookDemo={openModal} />
         <TestimonialsSection />
         <AlumniSection />
-        <BranchesSection />
         <FAQSection />
         <ContactSection />
       </main>
