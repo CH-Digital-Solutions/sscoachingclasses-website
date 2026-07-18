@@ -6,12 +6,9 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <div className="footer-logo">
-            <span className="brand-icon">SS</span>
-            <div className="brand-text">
-              <span className="brand-name">SS COACHING</span>
-              <span className="brand-sub">Classes</span>
-            </div>
+          <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" style={{ height: '56px', width: 'auto', background: '#fff', padding: '4px', borderRadius: '4px' }} />
+            <span style={{ fontFamily: '"Inter", sans-serif', fontSize: '1.6rem', fontWeight: '900', color: '#fff', letterSpacing: '0px' }}>SS Classes</span>
           </div>
           <p className="footer-tagline">Nurturing curious minds since 2008. Hindi, Urdu & English medium coaching for SSC, HSC & Degree.</p>
           <div className="footer-socials">

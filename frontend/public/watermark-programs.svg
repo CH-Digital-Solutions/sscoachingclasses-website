@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="160" cy="160" r="70" fill="#007bff" fill-opacity="0.02" />
+    <!-- Book icon -->
+    <path d="M110 170 h40 v-10 c0-5 10-5 10-5 s 10 0 10 5 v10 h20" fill="none" stroke="#007bff" stroke-width="3" stroke-opacity="0.06" />
+    <path d="M120 180 h30 M120 160 h30 M170 180 h20" stroke="#007bff" stroke-width="2" stroke-opacity="0.04" />
+    <!-- Geometry -->
+    <path d="M80 200 L200 80" stroke="#ff8c00" stroke-width="2" stroke-opacity="0.06" stroke-dasharray="6 6" />
+  </g>
+</svg>

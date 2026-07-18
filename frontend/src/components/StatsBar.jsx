@@ -40,7 +40,6 @@ export default function StatsBar() {
       <div className="container stats-grid">
         {stats.map((s, i) => (
           <div key={i} className="stat-item">
-            <span className="stat-icon" style={{color: 'rgba(255,255,255,0.8)'}}>{s.icon}</span>
             <div>
               <AnimatedNumber target={s.value} suffix={s.suffix} />
               <span className="stat-label">{s.label}</span>

@@ -4,42 +4,60 @@ export const toppers = [
     percentage: '88.40%',
     stream: 'SSC',
     year: '2025-26',
-    rank: 'School 1st'
+    rankPos: 1,
+    rankNum: '1st',
+    school: '1st in Citizen English School',
+    photo: '/students/anam.jpg'
   },
   {
     name: 'Sayed Nuzail Abbas',
     percentage: '86.80%',
     stream: 'SSC',
     year: '2025-26',
-    rank: 'School 2nd'
+    rankPos: 2,
+    rankNum: '2nd',
+    school: 'Shri Gita Vidyalay',
+    photo: '/students/nuzail.jpg'
   },
   {
     name: 'Sayyed Mohd Mehdi',
     percentage: '83.20%',
     stream: 'SSC',
     year: '2025-26',
-    rank: 'School 3rd'
+    rankPos: 3,
+    rankNum: '3rd',
+    school: 'Jafri English School',
+    photo: '/students/mehdi.jpg'
   },
   {
     name: 'Riya Sharma',
     percentage: '81.60%',
     stream: 'SSC',
     year: '2025-26',
-    rank: 'School 4th'
+    rankPos: 1,
+    rankNum: '1st',
+    school: 'Govandi Municipal School',
+    photo: '/students/riya.jpg'
   },
   {
     name: 'Arif Hussain',
     percentage: '80.20%',
     stream: 'SSC',
     year: '2025-26',
-    rank: 'School 5th'
+    rankPos: 2,
+    rankNum: '2nd',
+    school: 'Anjuman-e-Islam School',
+    photo: '/students/arif.jpg'
   },
   {
     name: 'Zainab Sheikh',
     percentage: '79.80%',
     stream: 'SSC',
     year: '2025-26',
-    rank: 'School 6th'
+    rankPos: 3,
+    rankNum: '3rd',
+    school: 'Govandi High School',
+    photo: '/students/zainab.jpg'
   }
 ];
 

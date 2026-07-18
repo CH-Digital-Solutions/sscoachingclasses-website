@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import StatsBar from './components/StatsBar';
 import FounderSection from './components/FounderSection';
-import EnrolmentSteps from './components/EnrolmentSteps';
-import WhyChooseUs from './components/WhyChooseUs';
+
+
 import MiddleBanner from './components/MiddleBanner';
 import ProgramsSection from './components/ProgramsSection';
 import TimingsSection from './components/TimingsSection';
@@ -34,8 +34,8 @@ export default function App() {
           <StatsBar />
         </div>
         <FounderSection />
-        <EnrolmentSteps onBookDemo={openModal} />
-        <WhyChooseUs />
+
+
         <MiddleBanner />
         <ProgramsSection onEnquire={openModal} />
         <TimingsSection />

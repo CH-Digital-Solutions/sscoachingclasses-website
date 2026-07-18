@@ -1,5 +1,5 @@
 import { programs } from '../data/programs';
-
+import { FaArrowRight } from 'react-icons/fa';
 
 export default function ProgramsSection({ onEnquire }) {
   return (
@@ -18,9 +18,9 @@ export default function ProgramsSection({ onEnquire }) {
               <p className="program-sub">{p.subtitle}</p>
               <p className="program-desc">{p.description}</p>
               <ul className="program-features">
-                {p.features.map((f, i) => <li key={i}>✓ {f}</li>)}
+                {p.features.map((f, i) => <li key={i}>{f}</li>)}
               </ul>
-              <button className="btn btn-primary program-cta" onClick={onEnquire}>Enquire Now ↗</button>
+              <button className="btn btn-primary program-cta" onClick={onEnquire}>Enquire Now <FaArrowRight style={{marginLeft: '8px'}} /></button>
             </div>
           ))}
         </div>

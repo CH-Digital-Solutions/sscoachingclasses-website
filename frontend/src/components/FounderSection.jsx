@@ -3,31 +3,17 @@ import { FaChalkboardTeacher } from 'react-icons/fa';
 export default function FounderSection() {
   return (
     <section className="founder section" id="about">
-      <div className="container founder-grid">
-        <div className="founder-image-wrap">
-          <div className="founder-image-placeholder">
-            <span style={{color: 'var(--color-primary)'}}><FaChalkboardTeacher /></span>
-          </div>
-          <div className="founder-exp-badge">
-            <strong>18+</strong>
-            <span>Years Exp.</span>
-          </div>
-        </div>
-        <div className="founder-content">
-          <span className="section-label">Meet Our Founder</span>
-          <h2 className="section-title">A Vision for <span className="accent-text italic-accent">Quality Education</span></h2>
-          <blockquote className="founder-quote">
-            "Every student deserves access to quality education, regardless of their medium of instruction. At SS Coaching Classes, we bridge the gap between potential and achievement."
-          </blockquote>
-          <div className="founder-info">
-            <h3>Prof. Farman Raza Syed</h3>
-            <p className="founder-title">Founder & Director</p>
-            <p className="founder-credentials">M.Sc. Mathematics · 18+ Years in Education</p>
-          </div>
-          <p className="founder-desc">
-            Since 2008, Professor Syed has been on a mission to provide accessible, high-quality education to students from all backgrounds. With dedicated Hindi, Urdu & English medium batches, SS Coaching Classes has transformed over 3,000 students into confident achievers.
-          </p>
-        </div>
+      <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
+        <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '24px' }}>
+          Welcome to <span className="accent-text">SS Coaching Classes</span>
+        </h2>
+        <p style={{ fontSize: '1.25rem', color: 'var(--color-dark)', lineHeight: '1.8', marginBottom: '32px', fontWeight: '500' }}>
+          At SS Coaching Classes, your child’s future is an intrinsic part of our collective vision. For over 15 years, we have been striving to achieve the perfect balance between knowledge & wisdom, between individual attention & collective growth; just to shape your child into leaders of tomorrow.
+        </p>
+        <p style={{ fontSize: '1.1rem', color: 'var(--color-text)', lineHeight: '1.7', marginBottom: '40px' }}>
+          Today we are recognized as a premium coaching institute for SSC, HSC, Commerce, Science & Degree programs. The environment we provide and the non-academic interventions we make are all a product of our commitment to the student’s overall academic improvement. We truly believe that, at our very core, SS Coaching Classes is a family!
+        </p>
+
       </div>
     </section>
   );

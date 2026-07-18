@@ -23,12 +23,9 @@ export default function Navbar({ onEnrolClick }) {
   return (
     <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="navbar-inner container">
-        <a href="#home" className="navbar-brand">
-          <span className="brand-icon">SS</span>
-          <div className="brand-text">
-            <span className="brand-name">SS COACHING</span>
-            <span className="brand-sub">Classes</span>
-          </div>
+        <a href="#home" className="navbar-brand" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" style={{ height: '48px', width: 'auto' }} />
+          <span style={{ fontFamily: '"Inter", sans-serif', fontSize: '1.4rem', fontWeight: '900', color: '#000', letterSpacing: '0px' }}>SS Classes</span>
         </a>
 
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>

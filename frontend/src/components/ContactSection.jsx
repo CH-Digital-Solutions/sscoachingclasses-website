@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', program: '', message: '' });
@@ -17,10 +17,21 @@ export default function ContactSection() {
 
   return (
     <section className="contact section" id="contact">
+      <div className="container" style={{ marginBottom: '60px', textAlign: 'center' }}>
+        <h2 className="section-title" style={{ fontSize: '2.5rem', textTransform: 'lowercase', letterSpacing: '-1px' }}>We're listening</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px', marginTop: '32px' }}>
+          {['SSC', 'HSC Science', 'HSC Commerce', 'Degree (B.Com/BAF/BMS)'].map((dept, i) => (
+            <a key={i} href="tel:+919221105658" style={{ padding: '16px 32px', background: '#fff', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)', color: 'var(--color-primary)', fontWeight: '700', fontSize: '1.1rem', boxShadow: 'var(--shadow-sm)', transition: 'var(--transition)' }} onMouseOver={e => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}>
+              <span style={{ display: 'block', fontSize: '0.8rem', color: 'var(--color-text-light)', textTransform: 'uppercase', marginBottom: '4px' }}>{dept}</span>
+              +91 92211 05658
+            </a>
+          ))}
+        </div>
+      </div>
       <div className="container contact-grid">
         <div className="contact-form-wrap">
           <span className="section-label">Get in Touch</span>
-          <h2 className="section-title">Send Us an <span className="accent-text">Inquiry</span></h2>
+          <h3 className="section-title" style={{ fontSize: '1.8rem' }}>Send Us an <span className="accent-text">Inquiry</span></h3>
           <form className="contact-form" onSubmit={handleSubmit}>
             <input type="text" placeholder="Student Name" required value={form.name} onChange={e => setForm({...form, name: e.target.value})} />
             <input type="tel" placeholder="+91 XXXXX XXXXX" required value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} />
@@ -32,24 +43,24 @@ export default function ContactSection() {
               <option>Degree Section (B.Com, BAF, BMS)</option>
             </select>
             <textarea placeholder="Your Message (optional)" rows={4} value={form.message} onChange={e => setForm({...form, message: e.target.value})} />
-            <button type="submit" className="btn btn-primary">{submitted ? '✓ Sent!' : 'Send Inquiry ↗'}</button>
+            <button type="submit" className="btn btn-primary">{submitted ? <><FaCheckCircle style={{marginRight: '8px'}}/> Sent!</> : <>Send Inquiry <FaArrowRight style={{marginLeft: '8px'}} /></>}</button>
           </form>
         </div>
         <div className="contact-info">
           <div className="info-card">
-            <h3>📍 Visit Us</h3>
+            <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-primary)' }}><FaMapMarkerAlt /> <span style={{color: 'var(--color-dark)'}}>Visit Us</span></h3>
             <p>1st & 2nd Floor, Near Baiganwadi, Above City Bakery, Govandi West, Mumbai - 400043</p>
           </div>
           <div className="info-card">
-            <h3>📞 Call Us</h3>
+            <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-primary)' }}><FaPhoneAlt /> <span style={{color: 'var(--color-dark)'}}>Call Us</span></h3>
             <p><a href="tel:+919221105658">+91 92211 05658</a></p>
           </div>
           <div className="info-card">
-            <h3>📧 Email Us</h3>
+            <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-primary)' }}><FaEnvelope /> <span style={{color: 'var(--color-dark)'}}>Email Us</span></h3>
             <p><a href="mailto:info@sscoachingclasses.in">info@sscoachingclasses.in</a></p>
           </div>
           <div className="info-card">
-            <h3>🕒 Timings</h3>
+            <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-primary)' }}><FaClock /> <span style={{color: 'var(--color-dark)'}}>Timings</span></h3>
             <p>Mon–Sat: 3:00 PM – 9:30 PM<br/>Sunday: 10:00 AM – 7:00 PM</p>
           </div>
           <div className="contact-map">
