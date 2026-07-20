@@ -1,11 +1,11 @@
 export const faqs = [
   {
     question: 'Where is SS Coaching Classes located?',
-    answer: 'SS Coaching Classes is located at 1st & 2nd Floor, Near Baiganwadi, Govandi West, Mumbai - 400043. We are easily accessible from Govandi East, Deonar, Chembur, Mankhurd and surrounding areas.'
+    answer: 'SS Coaching Classes is located at Vivekanand Society, near sardar nagar no 02 Bus stop, Sion Koliwada, Mumbai -37. We are easily accessible from surrounding areas.'
   },
   {
     question: 'Does SS Coaching Classes offer Hindi medium coaching?',
-    answer: 'Yes, SS Coaching Classes is one of the few coaching institutes offering dedicated Hindi medium batches alongside Urdu and English medium. Our Hindi medium coaching covers SSC (7th to 10th), HSC (11th & 12th) and Degree programs.'
+    answer: 'Yes, SS Coaching Classes is one of the few coaching institutes offering dedicated Hindi medium batches alongside Semi-English and English medium. Our Hindi medium coaching covers School (1st to 10th) and HSC Commerce (11th & 12th).'
   },
   {
     question: 'What are the fees, and can I pay in instalments?',

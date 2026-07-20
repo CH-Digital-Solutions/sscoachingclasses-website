@@ -17,16 +17,10 @@ export default function FounderSection() {
             </h2>
             <div className="founder-text">
               <p>
-                At SS Coaching Classes, your child's future is an intrinsic part of our collective vision.
-                For over 15 years, we have been striving to achieve the perfect balance between
-                <strong> knowledge &amp; wisdom</strong>, between individual attention &amp; collective growth —
-                just to shape your child into leaders of tomorrow.
+                Founded in 2015 by Mr. Satish Maurya and Mr. Sandeep Maurya, our institute was established with a clear vision—to bring a meaningful revolution to the field of education through quality teaching, academic excellence, and student-focused learning.
               </p>
               <p>
-                Today we are recognized as a premium coaching institute for SSC, HSC, Commerce, Science &amp;
-                Degree programs. The environment we provide and the non-academic interventions we make are all
-                a product of our commitment to the student's overall academic improvement. We truly believe that,
-                at our very core, <strong>SS Coaching Classes is a family!</strong>
+                Over the years, we have earned the trust of students and parents by providing a strong academic foundation, experienced faculty, and a supportive learning environment that helps every student achieve their full potential.
               </p>
             </div>
           </div>

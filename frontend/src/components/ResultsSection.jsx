@@ -1,7 +1,11 @@
+import { Link } from 'react-router-dom';
 import { toppers, resultStats } from '../data/results';
-import { FaTrophy, FaStar, FaMedal } from 'react-icons/fa';
+import { FaTrophy, FaStar, FaMedal, FaArrowRight } from 'react-icons/fa';
 
 export default function ResultsSection() {
+  // Show only top 3 performers
+  const top3 = toppers.slice(0, 3);
+
   return (
     <section className="rs-sec section" id="results">
       <div className="rs-glow rs-glow--1" />
@@ -29,8 +33,8 @@ export default function ResultsSection() {
 
         <div className="rs-toppers-wrap">
           <span className="rs-toppers-label"><FaMedal className="rs-toppers-label__icon" /> SSC Board Toppers 2025–26</span>
-          <div className="rs-toppers-grid">
-            {toppers.slice(0, 6).map((t, i) => (
+          <div className="rs-toppers-grid rs-toppers-grid--top3">
+            {top3.map((t, i) => (
               <div key={i} className="rs-topper">
                 <div className="rs-topper__avatar-wrap">
                   <div className="rs-topper__avatar-inner">
@@ -60,6 +64,13 @@ export default function ResultsSection() {
                 <div className="rs-topper__school">{t.school}</div>
               </div>
             ))}
+          </div>
+
+          {/* View All Results Button */}
+          <div className="rs-view-all">
+            <Link to="/results" className="btn btn--primary btn--lg">
+              View All Results <FaArrowRight />
+            </Link>
           </div>
         </div>
       </div>

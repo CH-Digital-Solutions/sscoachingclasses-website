@@ -10,7 +10,7 @@ export default function Footer() {
               <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" className="footer-logo__img" />
               <span className="footer-logo-name">SS CLASSES</span>
             </a>
-            <p className="footer-tagline">Nurturing curious minds since 2008. Hindi, Urdu & English medium coaching for SSC, HSC & Degree.</p>
+            <p className="footer-tagline">Nurturing curious minds since 2008. Hindi, Semi-English & English medium coaching for School & HSC Commerce.</p>
             <div className="footer-socials">
               <a href="https://www.instagram.com/sscoachingclasses" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="Instagram"><FaInstagram /></a>
               <a href="https://youtube.com/@sscoachingclasses" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="YouTube"><FaYoutube /></a>
@@ -24,6 +24,7 @@ export default function Footer() {
               <a href="#about">About</a>
               <a href="#programs">Programs</a>
               <a href="#results">Results</a>
+              <a href="#gallery">Gallery</a>
               <a href="#faq">FAQ</a>
               <a href="#contact">Contact</a>
             </div>
@@ -32,17 +33,16 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Programs</h4>
             <div className="footer-links">
-              <a href="#programs">SSC (7th–10th)</a>
-              <a href="#programs">HSC (11th–12th)</a>
-              <a href="#programs">B.Com / BAF / BMS</a>
+              <a href="#programs">School (1st–10th)</a>
+              <a href="#programs">HSC Commerce (11th–12th)</a>
             </div>
           </div>
 
           <div className="footer-col">
             <h4 className="footer-heading">Contact</h4>
             <div className="footer-links">
-              <p><FaMapMarkerAlt /> Govandi West, Mumbai – 400043</p>
-              <a href="tel:+919221105658"><FaPhoneAlt /> +91 92211 05658</a>
+              <p><FaMapMarkerAlt /> Vivekanand Society, near sardar nagar no 02 Bus stop, Sion Koliwada, Mumbai -37</p>
+              <a href="tel:+918080714141"><FaPhoneAlt /> +91 80807 14141</a>
               <a href="mailto:info@sscoachingclasses.in"><FaEnvelope /> info@sscoachingclasses.in</a>
             </div>
           </div>

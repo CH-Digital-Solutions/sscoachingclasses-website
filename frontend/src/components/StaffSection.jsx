@@ -1,14 +1,5 @@
-const fallbackAvatar = (seed) =>
-  `https://api.dicebear.com/9.x/personas/svg?seed=${encodeURIComponent(seed)}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffdfbf`;
-
-const staff = [
-  { name: 'Prof. Farman Raza Syed', role: 'Founder & Director', subject: 'Mathematics', qualification: 'M.Sc. Mathematics', exp: '18+ years', photo: '/staff/farman.jpg' },
-  { name: 'Mrs. Saima Khan', role: 'Senior Faculty', subject: 'Science', qualification: 'M.Sc. Chemistry', exp: '12+ years', photo: '/staff/saima.jpg' },
-  { name: 'Mr. Mohd. Irfan', role: 'Faculty', subject: 'English & SST', qualification: 'M.A. English', exp: '10+ years', photo: '/staff/irfan.jpg' },
-  { name: 'Mr. Asif Shaikh', role: 'Faculty', subject: 'Commerce & Accounts', qualification: 'M.Com, CA Inter', exp: '8+ years', photo: '/staff/asif.jpg' },
-  { name: 'Ms. Nazia Parveen', role: 'Faculty', subject: 'Hindi & Urdu', qualification: 'M.A. Hindi', exp: '9+ years', photo: '/staff/nazia.jpg' },
-  { name: 'Mr. Salman Ahmad', role: 'Faculty', subject: 'Physics & Maths', qualification: 'B.Tech, M.Sc.', exp: '7+ years', photo: '/staff/salman.jpg' },
-];
+import { Link } from 'react-router-dom';
+import { staff, fallbackAvatar } from '../data/staff';
 
 export default function StaffSection() {
   return (
@@ -20,7 +11,7 @@ export default function StaffSection() {
         </div>
         <div className="staff-grid">
           {staff.map((s, i) => (
-            <div key={i} className="staff-card">
+            <Link key={i} to={`/faculty/${s.id}`} className="staff-card" style={{ cursor: 'pointer', textDecoration: 'none' }}>
               <div className="staff-photo">
                 <img
                   src={s.photo}
@@ -28,6 +19,9 @@ export default function StaffSection() {
                   loading="lazy"
                   onError={(e) => { e.currentTarget.src = fallbackAvatar(s.name); }}
                 />
+                <div className="staff-photo__overlay">
+                  <span>View Profile</span>
+                </div>
               </div>
               <div className="staff-info">
                 <h4>{s.name}</h4>
@@ -38,7 +32,7 @@ export default function StaffSection() {
                   <span>{s.exp}</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,103 +1,90 @@
-import { FaGraduationCap, FaCheckCircle, FaMoneyBillWave, FaCalendarAlt } from 'react-icons/fa';
+import { FaGraduationCap, FaCheckCircle, FaMoneyBillWave, FaComments, FaMicrophone, FaGlobeAmericas, FaBookOpen, FaQuoteLeft } from 'react-icons/fa';
 
 export default function EnglishSpeakingCourseSection({ onEnquire }) {
   return (
-    <section className="section" id="english-speaking">
-      <div className="wrap">
+    <section className="eng-sec section" id="english-speaking">
+      <div className="eng-bg-pattern" />
+      <div className="eng-bg-letters">
+        <span className="eng-float-letter eng-float-letter--1">A</span>
+        <span className="eng-float-letter eng-float-letter--2">B</span>
+        <span className="eng-float-letter eng-float-letter--3">C</span>
+        <span className="eng-float-letter eng-float-letter--4">"</span>
+        <span className="eng-float-letter eng-float-letter--5">Aa</span>
+      </div>
+      <div className="wrap relative-z">
         <div className="section-head">
-          <span className="eyebrow">Special Program</span>
+          <span className="eyebrow"><FaComments /> Special Program</span>
           <h2 className="section-head__title">SS English Speaking <em>Course</em></h2>
+          <p className="section-head__desc">
+            Master spoken English with our specialized course designed to build confidence, vocabulary, and fluent communication skills.
+          </p>
         </div>
-        
-        <div className="english-course-container" style={{
-            background: 'linear-gradient(135deg, var(--bg-card) 0%, rgba(99, 102, 241, 0.05) 100%)',
-            borderRadius: '24px',
-            padding: '40px',
-            border: '1px solid var(--border-color)',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '30px'
-        }}>
-          
-          <div className="english-course-header" style={{ textAlign: 'center' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'var(--primary-color)', color: 'white', padding: '8px 16px', borderRadius: '30px', fontWeight: 'bold', marginBottom: '20px', fontSize: '0.9rem' }}>
-              <FaCheckCircle /> One Week Demo Free!
-            </div>
-            <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>
-              Master spoken English with our specialized course designed to build confidence, vocabulary, and fluent communication skills.
-            </p>
-          </div>
 
-          <div className="english-course-grid" style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '24px'
-          }}>
-            {/* Fees Structure */}
-            <div className="course-card-inner" style={{
-              background: 'var(--bg-white)',
-              padding: '24px',
-              borderRadius: '16px',
-              border: '1px solid var(--border-color)'
-            }}>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-main)' }}>
-                <FaMoneyBillWave color="var(--primary-color)" /> Fee Structure
-              </h3>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px' }}>
-                  <span style={{ fontWeight: '500' }}>Monthly</span>
-                  <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>₹2,000</span>
-                </li>
-                <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px' }}>
-                  <span style={{ fontWeight: '500' }}>6 Months (Installments)</span>
-                  <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>₹8,000</span>
-                </li>
-                <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px' }}>
-                  <span style={{ fontWeight: '500' }}>6 Months (One-time)</span>
-                  <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>₹6,000</span>
-                </li>
-                <li style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px' }}>
-                  <span style={{ fontWeight: '500' }}>Yearly (Installments)</span>
-                  <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>₹12,000</span>
-                </li>
-                <li style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span style={{ fontWeight: '500' }}>Yearly (One-time)</span>
-                  <span style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>₹9,000</span>
-                </li>
-              </ul>
-              <div style={{ marginTop: '16px', fontSize: '0.85rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                * Notes: ₹500 Extra
+        {/* Speech Bubble Quote */}
+        <div className="eng-quote-bubble">
+          <FaQuoteLeft className="eng-quote-icon" />
+          <p>"Speak English with confidence — the world is waiting to hear your voice."</p>
+          <span className="eng-quote-author">— Prof. Satish, Lead Instructor</span>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="eng-content-grid">
+
+
+
+          {/* Cards Grid */}
+          <div className="eng-cards-grid">
+            {/* Fee Structure Card */}
+            <div className="eng-card eng-card--fees">
+              <div className="eng-card__header">
+                <FaMoneyBillWave /> Fee Structure
+              </div>
+              <div className="eng-card__body">
+                <div className="eng-fee-row">
+                  <span className="eng-fee-label">Monthly</span>
+                  <span className="eng-fee-value">₹2,000</span>
+                </div>
+                <div className="eng-fee-row">
+                  <span className="eng-fee-label">6 Months (Installments)</span>
+                  <span className="eng-fee-value">₹8,000</span>
+                </div>
+                <div className="eng-fee-row">
+                  <span className="eng-fee-label">6 Months (One-time)</span>
+                  <span className="eng-fee-value eng-fee-value--save">₹6,000 <small>Save ₹2,000</small></span>
+                </div>
+                <div className="eng-fee-row">
+                  <span className="eng-fee-label">Yearly (Installments)</span>
+                  <span className="eng-fee-value">₹12,000</span>
+                </div>
+                <div className="eng-fee-row eng-fee-row--best">
+                  <span className="eng-fee-label">Yearly (One-time) <span className="eng-best-badge">BEST VALUE</span></span>
+                  <span className="eng-fee-value eng-fee-value--save">₹9,000 <small>Save ₹3,000</small></span>
+                </div>
+                <p className="eng-fee-note">* Notes: ₹500 Extra</p>
               </div>
             </div>
 
-            {/* Course Features */}
-            <div className="course-card-inner" style={{
-              background: 'var(--bg-white)',
-              padding: '24px',
-              borderRadius: '16px',
-              border: '1px solid var(--border-color)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}>
-              <div>
-                <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-main)' }}>
-                  <FaGraduationCap color="var(--primary-color)" /> Why Join Us?
-                </h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px', color: 'var(--text-muted)' }}>
-                  <li style={{ display: 'flex', gap: '10px' }}><FaCheckCircle style={{ color: 'var(--primary-color)', marginTop: '4px', flexShrink: 0 }} /> Guaranteed improvement in fluency</li>
-                  <li style={{ display: 'flex', gap: '10px' }}><FaCheckCircle style={{ color: 'var(--primary-color)', marginTop: '4px', flexShrink: 0 }} /> Daily conversational practice</li>
-                  <li style={{ display: 'flex', gap: '10px' }}><FaCheckCircle style={{ color: 'var(--primary-color)', marginTop: '4px', flexShrink: 0 }} /> Professional & experienced trainers</li>
-                  <li style={{ display: 'flex', gap: '10px' }}><FaCheckCircle style={{ color: 'var(--primary-color)', marginTop: '4px', flexShrink: 0 }} /> Learn with Prof. Satish</li>
+            {/* Why Join Card */}
+            <div className="eng-card eng-card--why">
+              <div className="eng-card__header">
+                <FaGraduationCap /> Why Join Us?
+              </div>
+              <div className="eng-card__body">
+                <ul className="eng-why-list">
+                  <li><FaCheckCircle className="eng-check" /> Guaranteed improvement in fluency</li>
+                  <li><FaCheckCircle className="eng-check" /> Daily conversational practice</li>
+                  <li><FaCheckCircle className="eng-check" /> Professional & experienced trainers</li>
+                  <li><FaCheckCircle className="eng-check" /> Learn with Prof. Satish</li>
+                  <li><FaCheckCircle className="eng-check" /> Small batch sizes for personal attention</li>
+                  <li><FaCheckCircle className="eng-check" /> Grammar, vocabulary & pronunciation</li>
                 </ul>
+                <button
+                  onClick={() => onEnquire('English Speaking Course')}
+                  className="btn btn--primary eng-cta"
+                >
+                  Enquire Now
+                </button>
               </div>
-              
-              <button 
-                onClick={onEnquire}
-                className="btn btn--primary" 
-                style={{ width: '100%', marginTop: '24px', justifyContent: 'center' }}>
-                Enquire Now
-              </button>
             </div>
           </div>
         </div>

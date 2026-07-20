@@ -1,7 +1,7 @@
 import { FaClipboardList, FaBullseye, FaBook, FaRocket, FaPhone, FaArrowRight } from 'react-icons/fa';
 
 const steps = [
-  { num: '01', title: 'Choose Your Program', desc: 'Select from SSC, HSC, or Degree programs in your preferred medium.', icon: <FaClipboardList /> },
+  { num: '01', title: 'Choose Your Program', desc: 'Select from School or HSC Commerce programs in your preferred medium.', icon: <FaClipboardList /> },
   { num: '02', title: 'Book a Free Demo', desc: 'Experience our teaching methodology with a complimentary 2-day trial.', icon: <FaBullseye /> },
   { num: '03', title: 'Enrol & Get Materials', desc: 'Complete enrolment and receive comprehensive study materials.', icon: <FaBook /> },
   { num: '04', title: 'Start Learning', desc: 'Begin your journey towards academic excellence with expert guidance.', icon: <FaRocket /> },
@@ -29,7 +29,7 @@ export default function EnrolmentSteps({ onBookDemo }) {
         </div>
         <div className="enrolment-actions">
           <button className="btn btn-primary" onClick={onBookDemo}>Book Free Demo <FaArrowRight /></button>
-          <a href="tel:+919221105658" className="btn btn-outline"><FaPhone /> Call Us</a>
+          <a href="tel:+918080714141" className="btn btn-outline"><FaPhone /> Call Us</a>
         </div>
       </div>
     </section>

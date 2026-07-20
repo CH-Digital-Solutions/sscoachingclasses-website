@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaTimes, FaGraduationCap, FaCheckCircle, FaArrowRight, FaClock } from 'react-icons/fa';
 
-export default function BookDemoModal({ isOpen, onClose }) {
-  const [form, setForm] = useState({ name: '', phone: '', program: 'School Section (7th to 10th)' });
+export default function BookDemoModal({ isOpen, onClose, prefilledProgram }) {
+  const [form, setForm] = useState({ name: '', phone: '', program: prefilledProgram || '' });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setForm(prev => ({ ...prev, program: prefilledProgram || '' }));
+    }
+  }, [isOpen, prefilledProgram]);
 
   if (!isOpen) return null;
 
@@ -47,9 +53,11 @@ export default function BookDemoModal({ isOpen, onClose }) {
               <div className="field">
                 <label className="field__label">Program</label>
                 <select className="field__select" value={form.program} onChange={e => setForm({ ...form, program: e.target.value })}>
-                  <option>School Section (7th to 10th)</option>
-                  <option>College Section (11th & 12th)</option>
-                  <option>Degree Section (B.Com, BAF, BMS)</option>
+                  <option value="">Select Program</option>
+                  <option>School Section (1st to 10th)</option>
+                  <option>HSC Commerce</option>
+                  <option>English Speaking Course</option>
+                  <option>Other</option>
                 </select>
               </div>
               <button type="submit" className="btn btn--primary">Request Free Consultation <FaArrowRight /></button>

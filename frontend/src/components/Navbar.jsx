@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Programs', href: '#programs' },
   { label: 'Results', href: '#results' },
+  { label: 'Gallery', href: '#gallery' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
@@ -26,7 +28,6 @@ export default function Navbar({ onEnrolClick }) {
       <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" className="nav__logo-img" />
       <span className="nav__logo-text">
         <span className="nav__logo-name">SS CLASSES</span>
-        <span className="nav__logo-sub">COACHING CLASSES</span>
       </span>
     </a>
   );
@@ -43,8 +44,8 @@ export default function Navbar({ onEnrolClick }) {
         </ul>
 
         <div className="nav__right">
-          <a href="tel:+919221105658" className="nav__phone">
-            <FaPhoneAlt /> +91 92211 05658
+          <a href="tel:+918080714141" className="nav__phone">
+            <FaPhoneAlt /> +91 80807 14141
           </a>
           <button className="btn btn--primary btn--sm nav__cta" onClick={onEnrolClick}>Enrol Now</button>
           <button className="nav__hamburger" onClick={() => setMenuOpen(true)} aria-label="Open menu">
@@ -67,7 +68,7 @@ export default function Navbar({ onEnrolClick }) {
             ))}
           </div>
           <div className="nav__mobile-actions">
-            <a href="tel:+919221105658" className="btn btn--outline"><FaPhoneAlt /> +91 92211 05658</a>
+            <a href="tel:+918080714141" className="btn btn--outline"><FaPhoneAlt /> +91 80807 14141</a>
             <button className="btn btn--primary" onClick={() => { onEnrolClick(); setMenuOpen(false); }}>Enrol Now</button>
           </div>
         </div>

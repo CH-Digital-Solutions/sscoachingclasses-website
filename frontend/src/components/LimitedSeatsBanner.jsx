@@ -14,7 +14,7 @@ export default function LimitedSeatsBanner({ onBookDemo }) {
             <div className="ab-btns">
               <button className="btn btn--primary btn--lg" onClick={onBookDemo}>Book Free Demo <FaArrowRight /></button>
               <a
-                href="https://wa.me/919221105658?text=Hello%2C%20I%20want%20to%20enquire%20about%20admissions"
+                href="https://wa.me/918080714141?text=Hello%2C%20I%20want%20to%20enquire%20about%20admissions"
                 target="_blank" rel="noopener noreferrer"
                 className="btn btn--wa btn--lg"
               >
