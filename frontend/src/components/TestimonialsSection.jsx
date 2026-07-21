@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
-import { FaQuoteRight, FaStar } from 'react-icons/fa';
+import { FaQuoteRight, FaStar, FaPen } from 'react-icons/fa';
 import { testimonials, googleRating } from '../data/testimonials';
+
+const GOOGLE_REVIEW_URL = 'https://local.google.com/place?placeid=ChIJOyzrk6TP5zsRmI_1t4OSUQ8&utm_medium=noren&utm_source=gbp&utm_campaign=2026';
 
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
@@ -46,6 +48,17 @@ export default function TestimonialsSection() {
           {testimonials.map((_, i) => (
             <button key={i} className={`rev-dot${i === current ? ' active' : ''}`} onClick={() => setCurrent(i)} aria-label={`Go to review ${i + 1}`} />
           ))}
+        </div>
+
+        <div className="rev-write-review">
+          <a
+            href={GOOGLE_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn--primary btn--lg"
+          >
+            <FaPen /> Write a Review
+          </a>
         </div>
       </div>
     </section>

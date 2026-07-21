@@ -6,7 +6,7 @@ const branches = [
     address: 'Vivekanand Society, near sardar nagar no 02 Bus stop, Sion Koliwada, Mumbai -37',
     phone: '+91 80807 14141',
     mapLink: 'https://maps.google.com/?q=Vivekanand+Society+Sion+Koliwada',
-    timings: ['8:00 AM - 9:30 AM', '5:30 PM - 7:00 PM', '8:00 PM - 9:30 PM'],
+    timings: ['8:00 AM - 9:30 PM'],
     isMain: true
   },
   {

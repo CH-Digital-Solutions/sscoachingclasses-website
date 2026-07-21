@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { FaArrowRight, FaChevronLeft, FaChevronRight, FaWhatsapp } from 'react-icons/fa';
 import StatsBar from './StatsBar';
-import { galleryImages } from '../data/gallery';
 
-// Shuffle and pick 8 images for the carousel
-const heroImages = [...galleryImages]
-  .sort(() => 0.5 - Math.random())
-  .slice(0, 8)
-  .map(img => img.src);
+// Result pamphlet images for hero carousel
+const pamphlets2025 = Array.from({ length: 11 }, (_, i) => `/results/2025-26/pamphlet-${i + 1}.jpeg`);
+const pamphlets2024 = Array.from({ length: 13 }, (_, i) => `/results/2024-25/pamphlet-${i + 1}.jpeg`);
+const heroImages = [...pamphlets2025, ...pamphlets2024];
 
 
 export default function HeroSection({ onBookDemo }) {
@@ -29,7 +27,7 @@ export default function HeroSection({ onBookDemo }) {
         <div className="hero__grid">
           <div className="hero__content">
             <h1 className="hero__title">
-              Shaping Tomorrow's <span className="hero__accent">Leaders</span>
+              <span className="hero__hindi-tagline">एक कदम <span style={{ color: 'var(--accent)' }}>सफलता</span> की ओर</span>
             </h1>
                 <p className="hero__desc">
                   Hindi, Semi-English &amp; English medium coaching for School &amp; HSC Commerce — with expert faculty,
@@ -55,14 +53,19 @@ export default function HeroSection({ onBookDemo }) {
                     <div
                       key={i}
                       className={`hero__slide${i === current ? ' active' : ''}`}
-                      style={{ backgroundImage: `url("${img}")` }}
-                    />
+                    >
+                      <div
+                        className="hero__slide-blur"
+                        style={{ backgroundImage: `url("${img}")` }}
+                      />
+                      <img
+                        src={img}
+                        alt={`SS Classes Result Pamphlet ${i + 1}`}
+                        className="hero__slide-img"
+                        loading={i === 0 ? 'eager' : 'lazy'}
+                      />
+                    </div>
                   ))}
-                  <div className="hero__dots">
-                    {heroImages.map((_, i) => (
-                      <span key={i} className={`hero__dot${i === current ? ' active' : ''}`} onClick={() => setCurrent(i)} />
-                    ))}
-                  </div>
                   <div className="hero__nav">
                     <button className="hero__nav-btn" onClick={() => go(-1)} aria-label="Previous"><FaChevronLeft /></button>
                     <button className="hero__nav-btn" onClick={() => go(1)} aria-label="Next"><FaChevronRight /></button>

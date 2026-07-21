@@ -1,10 +1,17 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { toppers, resultStats } from '../data/results';
-import { FaTrophy, FaStar, FaMedal, FaArrowRight } from 'react-icons/fa';
+import { FaTrophy, FaMedal, FaArrowRight, FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
+import { resultStats } from '../data/results';
+
+// Result pamphlet images
+const pamphlets2025 = Array.from({ length: 11 }, (_, i) => `/results/2025-26/pamphlet-${i + 1}.jpeg`);
 
 export default function ResultsSection() {
-  // Show only top 3 performers
-  const top3 = toppers.slice(0, 3);
+  const [current, setCurrent] = useState(0);
+  const [lightbox, setLightbox] = useState(null);
+  const images = pamphlets2025;
+
+  const go = (dir) => setCurrent(p => (p + dir + images.length) % images.length);
 
   return (
     <section className="rs-sec section" id="results">
@@ -31,49 +38,77 @@ export default function ResultsSection() {
           </div>
         </div>
 
-        <div className="rs-toppers-wrap">
-          <span className="rs-toppers-label"><FaMedal className="rs-toppers-label__icon" /> SSC Board Toppers 2025–26</span>
-          <div className="rs-toppers-grid rs-toppers-grid--top3">
-            {top3.map((t, i) => (
-              <div key={i} className="rs-topper">
-                <div className="rs-topper__avatar-wrap">
-                  <div className="rs-topper__avatar-inner">
-                    {t.photo ? (
-                      <img
-                        src={t.photo}
-                        alt={t.name}
-                        className="rs-topper__avatar"
-                        loading="lazy"
-                        onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextSibling.style.display = 'flex'; }}
-                      />
-                    ) : null}
-                    <div className="rs-topper__avatar-fallback" style={{ display: t.photo ? 'none' : 'flex' }}>{t.name[0]}</div>
-                  </div>
-                  <div className={`rs-topper__medallion rank-${t.rankPos}`}>
-                    <FaStar />
-                    <span>{t.rankNum}</span>
-                  </div>
+        {/* Pamphlet Slider */}
+        <div className="rs-pamphlet-wrap">
+          <span className="rs-toppers-label"><FaMedal className="rs-toppers-label__icon" /> Our Results 2025–26</span>
+
+          <div className="rs-pamphlet-slider">
+            <button className="rs-pamphlet-nav rs-pamphlet-nav--prev" onClick={() => go(-1)} aria-label="Previous">
+              <FaChevronLeft />
+            </button>
+
+            <div className="rs-pamphlet-viewport">
+              {images.map((img, i) => (
+                <div
+                  key={i}
+                  className={`rs-pamphlet-slide${i === current ? ' active' : ''}`}
+                  onClick={() => setLightbox(i)}
+                >
+                  <div
+                    className="rs-pamphlet-blur"
+                    style={{ backgroundImage: `url("${img}")` }}
+                  />
+                  <img
+                    src={img}
+                    alt={`SS Classes Result ${i + 1}`}
+                    className="rs-pamphlet-img"
+                    loading="lazy"
+                  />
                 </div>
-                <h4 className="rs-topper__name">{t.name}</h4>
-                <div className="rs-topper__score">{t.percentage}</div>
-                <div className="rs-topper__meta">
-                  <span>{t.stream}</span>
-                  <span className="rs-topper__dot">●</span>
-                  <span>{t.year}</span>
-                </div>
-                <div className="rs-topper__school">{t.school}</div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <button className="rs-pamphlet-nav rs-pamphlet-nav--next" onClick={() => go(1)} aria-label="Next">
+              <FaChevronRight />
+            </button>
           </div>
 
-          {/* View All Results Button */}
-          <div className="rs-view-all">
-            <Link to="/results" className="btn btn--primary btn--lg">
-              View All Results <FaArrowRight />
-            </Link>
+          <div className="rs-pamphlet-dots">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                className={`rs-pamphlet-dot${i === current ? ' active' : ''}`}
+                onClick={() => setCurrent(i)}
+                aria-label={`Go to result ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
+
+        {/* View All Results Button */}
+        <div className="rs-view-all">
+          <Link to="/results" className="btn btn--primary btn--lg">
+            View All Results <FaArrowRight />
+          </Link>
+        </div>
       </div>
+
+      {/* Lightbox */}
+      {lightbox !== null && (
+        <div className="rs-lightbox" onClick={() => setLightbox(null)}>
+          <button className="rs-lightbox__close" onClick={() => setLightbox(null)} aria-label="Close"><FaTimes /></button>
+          <div className="rs-lightbox__content" onClick={e => e.stopPropagation()}>
+            <div className="rs-lightbox__blur" style={{ backgroundImage: `url("${images[lightbox]}")` }} />
+            <img src={images[lightbox]} alt={`Result ${lightbox + 1}`} className="rs-lightbox__img" />
+            <button className="rs-lightbox__nav rs-lightbox__nav--prev" onClick={() => setLightbox((lightbox - 1 + images.length) % images.length)} aria-label="Previous">
+              <FaChevronLeft />
+            </button>
+            <button className="rs-lightbox__nav rs-lightbox__nav--next" onClick={() => setLightbox((lightbox + 1) % images.length)} aria-label="Next">
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

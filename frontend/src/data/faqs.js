@@ -5,7 +5,7 @@ export const faqs = [
   },
   {
     question: 'Does SS Coaching Classes offer Hindi medium coaching?',
-    answer: 'Yes, SS Coaching Classes is one of the few coaching institutes offering dedicated Hindi medium batches alongside Semi-English and English medium. Our Hindi medium coaching covers School (1st to 10th) and HSC Commerce (11th & 12th).'
+    answer: 'Yes, SS Coaching Classes is one of the few coaching institutes offering dedicated Hindi medium batches alongside Semi-English and English medium. Our Hindi medium coaching covers School (5th to 10th) and HSC Commerce (11th & 12th).'
   },
   {
     question: 'What are the fees, and can I pay in instalments?',

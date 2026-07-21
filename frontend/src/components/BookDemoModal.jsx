@@ -20,7 +20,7 @@ export default function BookDemoModal({ isOpen, onClose, prefilledProgram }) {
     } catch (err) { /* */ }
     setSubmitted(true);
     setTimeout(() => { setSubmitted(false); onClose(); }, 2500);
-    setForm({ name: '', phone: '', program: 'School Section (7th to 10th)' });
+    setForm({ name: '', phone: '', program: '' });
   };
 
   return (
@@ -54,8 +54,10 @@ export default function BookDemoModal({ isOpen, onClose, prefilledProgram }) {
                 <label className="field__label">Program</label>
                 <select className="field__select" value={form.program} onChange={e => setForm({ ...form, program: e.target.value })}>
                   <option value="">Select Program</option>
-                  <option>School Section (1st to 10th)</option>
-                  <option>HSC Commerce</option>
+                  <option>School Section (5th to 10th)</option>
+                  <option>Commerce (11th & 12th)</option>
+                  <option>Arts (11th & 12th)</option>
+                  <option>Science (11th & 12th)</option>
                   <option>English Speaking Course</option>
                   <option>Other</option>
                 </select>

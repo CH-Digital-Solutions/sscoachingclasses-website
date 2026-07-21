@@ -1,4 +1,4 @@
-import { FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGoogle } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -12,8 +12,9 @@ export default function Footer() {
             </a>
             <p className="footer-tagline">Nurturing curious minds since 2008. Hindi, Semi-English & English medium coaching for School & HSC Commerce.</p>
             <div className="footer-socials">
-              <a href="https://www.instagram.com/sscoachingclasses" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="Instagram"><FaInstagram /></a>
-              <a href="https://youtube.com/@sscoachingclasses" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="YouTube"><FaYoutube /></a>
+              <a href="https://www.instagram.com/ssclassesprofsatish?utm_source=qr&igsh=bzljYXYwOTU3azg=" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://www.youtube.com/@ssclassesprof.satish8939" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="YouTube"><FaYoutube /></a>
+              <a href="https://local.google.com/place?placeid=ChIJOyzrk6TP5zsRmI_1t4OSUQ8&utm_medium=noren&utm_source=gbp&utm_campaign=2026" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="Google"><FaGoogle /></a>
             </div>
           </div>
 
@@ -33,8 +34,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Programs</h4>
             <div className="footer-links">
-              <a href="#programs">School (1st–10th)</a>
-              <a href="#programs">HSC Commerce (11th–12th)</a>
+              <a href="#programs">School (5th–10th)</a>
+              <a href="#programs">Commerce (11th–12th)</a>
+              <a href="#programs">Arts (11th–12th)</a>
+              <a href="#programs">Science (11th–12th)</a>
             </div>
           </div>
 

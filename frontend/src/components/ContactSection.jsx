@@ -80,7 +80,7 @@ export default function ContactSection() {
                         required
                       >
                         <option value="">Select Program</option>
-                        <option>School Section (1st to 10th)</option>
+                        <option>School Section (5th to 10th)</option>
                         <option>HSC Commerce</option>
                         <option>English Speaking Course</option>
                         <option>Other</option>

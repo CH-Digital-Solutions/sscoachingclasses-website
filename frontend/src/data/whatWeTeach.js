@@ -1,9 +1,9 @@
 export const programDetails = [
   {
     id: 'ssc',
-    title: 'School Section (1st to 10th)',
+    title: 'School Section (5th to 10th)',
     category: 'School',
-    tagline: 'Complete preparation for Class 1st to 10th',
+    tagline: 'Complete preparation for Class 5th to 10th',
     description: 'Our School program covers the full Maharashtra State Board curriculum for classes 1st through 10th. Available in Hindi, Semi-English, and English medium. We ensure every student receives personalized attention and comprehensive preparation for exams.',
     subjects: ['Mathematics', 'Science', 'English', 'Hindi', 'Urdu', 'Social Studies'],
     highlights: [
@@ -14,7 +14,7 @@ export const programDetails = [
       'Parent-teacher meetings every month',
       'Personal academic mentor for each student'
     ],
-    eligibility: 'Students from Class 1st to 10th',
+    eligibility: 'Students from Class 5th to 10th',
     batchSize: '35 students per batch',
     duration: 'Full academic year (June – March)',
     medium: ['Hindi', 'Semi-English', 'English'],
