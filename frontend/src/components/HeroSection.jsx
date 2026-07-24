@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { FaArrowRight, FaChevronLeft, FaChevronRight, FaWhatsapp } from 'react-icons/fa';
 import StatsBar from './StatsBar';
 
-// Result pamphlet images for hero carousel
-const pamphlets2025 = Array.from({ length: 11 }, (_, i) => `/results/2025-26/pamphlet-${i + 1}.jpeg`);
-const pamphlets2024 = Array.from({ length: 13 }, (_, i) => `/results/2024-25/pamphlet-${i + 1}.jpeg`);
-const heroImages = [...pamphlets2025, ...pamphlets2024];
+import { galleryImages } from '../data/gallery';
+
+// Gallery photos for hero carousel
+const heroImages = galleryImages.map(img => img.src);
 
 
 export default function HeroSection({ onBookDemo }) {
@@ -60,7 +60,7 @@ export default function HeroSection({ onBookDemo }) {
                       />
                       <img
                         src={img}
-                        alt={`SS Classes Result Pamphlet ${i + 1}`}
+                        alt={`SS Classes Gallery Photo ${i + 1}`}
                         className="hero__slide-img"
                         loading={i === 0 ? 'eager' : 'lazy'}
                       />

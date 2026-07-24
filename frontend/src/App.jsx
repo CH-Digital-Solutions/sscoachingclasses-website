@@ -15,7 +15,7 @@ function ScrollReveal() {
   const { pathname } = useLocation();
   useEffect(() => {
     // Select elements to reveal
-    const targets = document.querySelectorAll('section, .prog-card, .branch-card, .staff-card, .rs-topper, .alumni-card, .rev-card, .gallery-item');
+    const targets = document.querySelectorAll('section:not(.no-reveal), .prog-card, .branch-card, .staff-card, .rs-topper, .alumni-card, .rev-card, .gallery-item, .gp-item');
     
     // Add base class
     targets.forEach(el => el.classList.add('reveal-init'));

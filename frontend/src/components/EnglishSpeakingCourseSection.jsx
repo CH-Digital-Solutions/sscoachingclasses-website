@@ -42,15 +42,15 @@ export default function EnglishSpeakingCourseSection({ onEnquire }) {
               <div className="eng-card__body">
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">Monthly</span>
-                  <span className="eng-fee-value">₹2,000</span>
+                  <span className="eng-fee-value">₹999</span>
                 </div>
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">6 Months (Installments)</span>
-                  <span className="eng-fee-value">₹8,000</span>
+                  <span className="eng-fee-value">₹9,000</span>
                 </div>
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">6 Months (One-time)</span>
-                  <span className="eng-fee-value eng-fee-value--save">₹6,000 <small>Save ₹2,000</small></span>
+                  <span className="eng-fee-value eng-fee-value--save">₹6,000 <small>Save ₹3,000</small></span>
                 </div>
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">Yearly (Installments)</span>
@@ -60,7 +60,11 @@ export default function EnglishSpeakingCourseSection({ onEnquire }) {
                   <span className="eng-fee-label">Yearly (One-time) <span className="eng-best-badge">BEST VALUE</span></span>
                   <span className="eng-fee-value eng-fee-value--save">₹9,000 <small>Save ₹3,000</small></span>
                 </div>
-                <p className="eng-fee-note">* Notes: ₹500 Extra</p>
+                <div className="eng-fee-row">
+                  <span className="eng-fee-label">Admission Fees</span>
+                  <span className="eng-fee-value">₹999</span>
+                </div>
+                <p className="eng-fee-note">Notes (₹600), Bag (₹300), T-Shirt (₹300)</p>
               </div>
             </div>
 

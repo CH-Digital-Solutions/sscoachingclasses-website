@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft, FaTrophy, FaMedal, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { resultStats } from '../data/results';
@@ -22,6 +22,17 @@ export default function ResultsPage() {
     setLightbox((lightbox + dir + currentImages.length) % currentImages.length);
   };
 
+  useEffect(() => {
+    if (lightbox !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [lightbox]);
+
   return (
     <>
       {/* Hero */}
@@ -41,21 +52,7 @@ export default function ResultsPage() {
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="rp-stats-row">
-            <div className="rp-stat-card">
-              <span className="rp-stat-card__value">{resultStats.studentsTaught.toLocaleString()}+</span>
-              <span className="rp-stat-card__label">Students Taught</span>
-            </div>
-            <div className="rp-stat-card">
-              <span className="rp-stat-card__value">{resultStats.passRate}%</span>
-              <span className="rp-stat-card__label">Pass Rate</span>
-            </div>
-            <div className="rp-stat-card">
-              <span className="rp-stat-card__value">{resultStats.boardToppers}+</span>
-              <span className="rp-stat-card__label">Board Toppers</span>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -100,15 +97,14 @@ export default function ResultsPage() {
 
       {/* Lightbox */}
       {lightbox !== null && (
-        <div className="rs-lightbox" onClick={() => setLightbox(null)}>
-          <button className="rs-lightbox__close" onClick={() => setLightbox(null)} aria-label="Close"><FaTimes /></button>
-          <div className="rs-lightbox__content" onClick={e => e.stopPropagation()}>
-            <div className="rs-lightbox__blur" style={{ backgroundImage: `url("${currentImages[lightbox]}")` }} />
-            <img src={currentImages[lightbox]} alt={`Result ${lightbox + 1}`} className="rs-lightbox__img" />
-            <button className="rs-lightbox__nav rs-lightbox__nav--prev" onClick={() => lightboxNav(-1)} aria-label="Previous">
+        <div className="gallery-lightbox" onClick={() => setLightbox(null)}>
+          <div className="gallery-lightbox__inner" onClick={e => e.stopPropagation()}>
+            <img src={currentImages[lightbox]} alt={`Result ${lightbox + 1}`} className="gallery-lightbox__img" />
+            <button className="gallery-lightbox__close" onClick={() => setLightbox(null)} aria-label="Close"><FaTimes /></button>
+            <button className="gallery-lightbox__nav gallery-lightbox__nav--prev" onClick={() => lightboxNav(-1)} aria-label="Previous">
               <FaChevronLeft />
             </button>
-            <button className="rs-lightbox__nav rs-lightbox__nav--next" onClick={() => lightboxNav(1)} aria-label="Next">
+            <button className="gallery-lightbox__nav gallery-lightbox__nav--next" onClick={() => lightboxNav(1)} aria-label="Next">
               <FaChevronRight />
             </button>
           </div>

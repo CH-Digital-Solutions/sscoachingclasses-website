@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTrophy, FaMedal, FaArrowRight, FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 import { resultStats } from '../data/results';
@@ -13,7 +13,19 @@ export default function ResultsSection() {
 
   const go = (dir) => setCurrent(p => (p + dir + images.length) % images.length);
 
+  useEffect(() => {
+    if (lightbox !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [lightbox]);
+
   return (
+    <>
     <section className="rs-sec section" id="results">
       <div className="rs-glow rs-glow--1" />
       <div className="wrap">
@@ -93,22 +105,23 @@ export default function ResultsSection() {
         </div>
       </div>
 
+      </section>
+
       {/* Lightbox */}
       {lightbox !== null && (
-        <div className="rs-lightbox" onClick={() => setLightbox(null)}>
-          <button className="rs-lightbox__close" onClick={() => setLightbox(null)} aria-label="Close"><FaTimes /></button>
-          <div className="rs-lightbox__content" onClick={e => e.stopPropagation()}>
-            <div className="rs-lightbox__blur" style={{ backgroundImage: `url("${images[lightbox]}")` }} />
-            <img src={images[lightbox]} alt={`Result ${lightbox + 1}`} className="rs-lightbox__img" />
-            <button className="rs-lightbox__nav rs-lightbox__nav--prev" onClick={() => setLightbox((lightbox - 1 + images.length) % images.length)} aria-label="Previous">
+        <div className="gallery-lightbox" onClick={() => setLightbox(null)}>
+          <div className="gallery-lightbox__inner" onClick={e => e.stopPropagation()}>
+            <img src={images[lightbox]} alt={`Result ${lightbox + 1}`} className="gallery-lightbox__img" />
+            <button className="gallery-lightbox__close" onClick={() => setLightbox(null)} aria-label="Close"><FaTimes /></button>
+            <button className="gallery-lightbox__nav gallery-lightbox__nav--prev" onClick={() => setLightbox((lightbox - 1 + images.length) % images.length)} aria-label="Previous">
               <FaChevronLeft />
             </button>
-            <button className="rs-lightbox__nav rs-lightbox__nav--next" onClick={() => setLightbox((lightbox + 1) % images.length)} aria-label="Next">
+            <button className="gallery-lightbox__nav gallery-lightbox__nav--next" onClick={() => setLightbox((lightbox + 1) % images.length)} aria-label="Next">
               <FaChevronRight />
             </button>
           </div>
         </div>
       )}
-    </section>
+    </>
   );
 }

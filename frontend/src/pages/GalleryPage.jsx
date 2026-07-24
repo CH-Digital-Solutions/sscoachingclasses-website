@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaImages, FaArrowLeft, FaTimes, FaChevronLeft, FaChevronRight, FaSearch } from 'react-icons/fa';
 import { galleryImages } from '../data/gallery';
@@ -16,6 +16,17 @@ export default function GalleryPage() {
       index: (prev.index + dir + filtered.length) % filtered.length
     }));
   };
+
+  useEffect(() => {
+    if (lightbox.open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [lightbox.open]);
 
   return (
     <>
@@ -40,7 +51,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Grid */}
-      <section className="gp-gallery section">
+      <section className="gp-gallery section no-reveal">
         <div className="wrap">
           {/* Filter Bar */}
           <div className="gp-filter-bar">
@@ -72,6 +83,11 @@ export default function GalleryPage() {
       {lightbox.open && filtered[lightbox.index] && (
         <div className="gallery-lightbox" onClick={closeLightbox}>
           <div className="gallery-lightbox__inner" onClick={e => e.stopPropagation()}>
+            <img
+              src={filtered[lightbox.index].src}
+              alt={filtered[lightbox.index].alt}
+              className="gallery-lightbox__img"
+            />
             <button className="gallery-lightbox__close" onClick={closeLightbox} aria-label="Close">
               <FaTimes />
             </button>
@@ -82,11 +98,6 @@ export default function GalleryPage() {
             >
               <FaChevronLeft />
             </button>
-            <img
-              src={filtered[lightbox.index].src}
-              alt={filtered[lightbox.index].alt}
-              className="gallery-lightbox__img"
-            />
             <button
               className="gallery-lightbox__nav gallery-lightbox__nav--next"
               onClick={() => navigateLightbox(1)}
