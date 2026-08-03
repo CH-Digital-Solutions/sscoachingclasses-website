@@ -30,7 +30,7 @@ export default function FacultyProfilePage() {
               <h1 className="faculty-page__name">{teacher.name}</h1>
               <span className="faculty-page__role">{teacher.role}</span>
               <div className="faculty-page__tags">
-                <span className="faculty-page__tag"><FaChalkboardTeacher /> {teacher.subject}</span>
+                {teacher.subject && <span className="faculty-page__tag"><FaChalkboardTeacher /> {teacher.subject}</span>}
                 <span className="faculty-page__tag"><FaGraduationCap /> {teacher.qualification}</span>
                 <span className="faculty-page__tag"><FaBriefcase /> {teacher.exp}</span>
               </div>
