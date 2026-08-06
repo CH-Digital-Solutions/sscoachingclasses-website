@@ -220,6 +220,20 @@ export const staff = [
     achievements: [],
     quote: ''
   }
+  ,
+  {
+    id: 'shashikala-bharati',
+    name: 'Shashikala Bharati',
+    role: 'Faculty',
+    subject: '',
+    qualification: 'B.A.',
+    exp: '',
+    photo: '/staff/Shashikala Bharati B.A.jpeg',
+    bio: 'Ms. Shashikala Bharati is a valued faculty member at SS Coaching Classes.',
+    specializations: [],
+    achievements: [],
+    quote: ''
+  }
 ];
 
 export const fallbackAvatar = (seed) =>
