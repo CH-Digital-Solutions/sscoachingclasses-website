@@ -11,7 +11,9 @@ app.use(express.json());
 
 // API Routes
 const contactRoute = require('./src/routes/contact');
+const demoRoute = require('./src/routes/demo');
 app.use('/api/contact', contactRoute);
+app.use('/api/demo', demoRoute);
 
 // Serve frontend static build
 const distPath = path.join(__dirname, '../frontend/dist');

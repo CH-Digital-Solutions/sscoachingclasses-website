@@ -1,4 +1,5 @@
-const router = require('express').Router();
+const express = require('express');
+const router = express.Router();
 const { Resend } = require('resend');
 const { emailTemplate } = require('./emailTemplate');
 
@@ -6,24 +7,22 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 router.post('/', async (req, res) => {
   try {
-    const { name, phone, email, program, message } = req.body;
+    const { name, phone, program } = req.body;
 
     const html = emailTemplate({
-      title: `New Inquiry from ${name}`,
-      badgeText: '📩 New Contact Form Submission',
+      title: `Free Demo Request from ${name}`,
+      badgeText: '🎓 Free Demo Booking',
       rows: [
         { label: 'Student Name', value: name },
         { label: 'Phone Number', value: phone },
-        { label: 'Email Address', value: email },
         { label: 'Program', value: program },
-        { label: 'Message', value: message },
       ]
     });
 
     const { data, error } = await resend.emails.send({
       from: 'SS Classes <onboarding@resend.dev>',
       to: [process.env.DESTINATION_EMAIL],
-      subject: `📩 New Inquiry from ${name} – SS Classes`,
+      subject: `🎓 Free Demo Request from ${name} – SS Classes`,
       html,
     });
 
