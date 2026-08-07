@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; lin
 .nav__phone:hover { color: var(--primary); }
 .nav__cta { display: none; }
 .nav__hamburger { background: none; color: var(--text-dark); font-size: 1.4rem; z-index: 1001; width: 44px; height: 44px; padding: 0; display: flex; align-items: center; justify-content: center; }
-.nav__mobile { position: fixed; inset: 0; background: var(--white); z-index: 1005; display: flex; flex-direction: column; padding: 1rem 1.25rem 2rem; animation: mobileIn .35s var(--ease); }
+.nav__mobile { position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh; height: 100dvh; background: var(--white); z-index: 9999; display: flex; flex-direction: column; padding: 1rem 1.25rem 2rem; animation: mobileIn .35s var(--ease); overflow: hidden; }
 @keyframes mobileIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 .nav__mobile-header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; }
 .nav__mobile-links { flex: 1 1 auto; display: flex; flex-direction: column; gap: .25rem; overflow-y: auto; }

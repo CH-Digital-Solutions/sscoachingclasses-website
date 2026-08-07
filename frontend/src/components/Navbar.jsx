@@ -23,6 +23,24 @@ export default function Navbar({ onEnrolClick }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [menuOpen]);
+
   const Brand = () => (
     <a href="#home" className="nav__brand" onClick={() => setMenuOpen(false)}>
       <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" className="nav__logo-img" />
