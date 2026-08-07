@@ -91,6 +91,7 @@ export const staff = [
     quote: 'Success is not final, failure is not fatal: it is the courage to continue that counts.'
   },
   {
+<<<<<<< Updated upstream
     id: 'arun-kumar',
     name: 'Arun Kumar',
     role: 'Faculty',
@@ -233,6 +234,19 @@ export const staff = [
     specializations: [],
     achievements: [],
     quote: ''
+=======
+    id: 'shashikala-bharati',
+    name: 'Shashikala Bharati',
+    role: 'Faculty',
+    subject: 'General Studies',
+    qualification: 'B.A.',
+    exp: 'Experienced',
+    photo: '/staff/Shashikala Bharati BA.jpeg',
+    bio: 'Ms. Shashikala Bharati is a dedicated faculty member with a B.A. degree. She brings her passion for teaching to the institute, ensuring students understand concepts deeply.',
+    specializations: ['General Studies', 'Student Mentoring'],
+    achievements: ['Dedicated educator'],
+    quote: 'Education is the passport to the future, for tomorrow belongs to those who prepare for it today.'
+>>>>>>> Stashed changes
   }
 ];
 

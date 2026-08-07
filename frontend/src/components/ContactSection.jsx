@@ -133,7 +133,7 @@ export default function ContactSection() {
         {/* Timing and Map Section */}
         <div className="contact-bottom-grid">
           <div className="contact-map-new">
-            <iframe src="https://maps.google.com/maps?q=Vivekanand+Society+Sion+Koliwada+Mumbai&t=&z=14&ie=UTF8&iwloc=&output=embed" height="100%" allowFullScreen="" loading="lazy" title="Location" />
+            <iframe src="https://maps.google.com/maps?q=S+S+Coaching+Classes+(+Prof.+Satish+)&t=&z=14&ie=UTF8&iwloc=&output=embed" height="100%" allowFullScreen="" loading="lazy" title="Location" />
           </div>
         </div>
       </div>
