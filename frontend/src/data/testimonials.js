@@ -148,6 +148,150 @@ export const testimonials = [
     role: 'Student',
     quote: "I get theoretical and practical knowledge about shares and share market... Because of it now I am able to trade on stock market... Thank you.. SS",
     rating: 5
+  },
+  {
+    name: 'Ajruddin darji',
+    role: 'Student · 3 reviews',
+    quote: "Good qualified teacher in this class. If u join this class u will get 100% result.",
+    rating: 5
+  },
+  {
+    name: 'MD Naimajul',
+    role: 'Student · 2 reviews',
+    quote: "Best classes in GTB Nagar Sion koliwada...with excellent teachers",
+    rating: 5
+  },
+  {
+    name: 'Krishna Surwade',
+    role: 'Student',
+    quote: "No words to give explanation abt sir and his teaching patter....with flexible time table and sirs hardward and motivation boost our moral.",
+    rating: 5
+  },
+  {
+    name: 'Kajal Mishra',
+    role: 'Student · 4 reviews',
+    quote: "Very qualified teachers are available. you will see 100% good results.",
+    rating: 4
+  },
+  {
+    name: 'Rekha Churasiya',
+    role: 'Student',
+    quote: "Nice lecture and teacher ya sir padae achi hute hai 🙏👩",
+    rating: 5
+  },
+  {
+    name: 'Yash Kulungade',
+    role: 'Student',
+    quote: "All teachers and sir teaching nice I like their teaching. And the classes is nice.",
+    rating: 5
+  },
+  {
+    name: 'Aniruddh Singh',
+    role: 'Student',
+    quote: "It's good to learn under such a excellent teacher... Like satish sir",
+    rating: 4
+  },
+  {
+    name: 'Sarita Ram Vishwash Chaurasia',
+    role: 'Local Guide · 7 reviews',
+    quote: "★ Friendly Teachers. ★ Clear Every Doubt. ★ Very Helpful To Students.",
+    rating: 5
+  },
+  {
+    name: 'Rohan Ughade',
+    role: 'Student · 2 reviews',
+    quote: "I am so lucky to get such an outstanding class with future oriented studies",
+    rating: 5
+  },
+  {
+    name: 'Yash Bashire',
+    role: 'Student · 2 reviews',
+    quote: "Good classes with good teachers and also organizes sports events 👍",
+    rating: 5
+  },
+  {
+    name: 'Ashraf ali shaikh',
+    role: 'Student · 6 reviews',
+    quote: "I feel very glad that I learned from ss coaching classes",
+    rating: 5
+  },
+  {
+    name: 'Sapna maurya',
+    role: 'Student',
+    quote: "Good teaching pattern and excellent co ordination with students",
+    rating: 5
+  },
+  {
+    name: 'Nikita Naik',
+    role: 'Student',
+    quote: "S.S.Class sir teaching is good. I like his teaching",
+    rating: 5
+  },
+  {
+    name: 'Ketan Chipte',
+    role: 'Student',
+    quote: "It's not only give me knowledge but also help me to develop my personality",
+    rating: 5
+  },
+  {
+    name: 'Joshna Chaudhary',
+    role: 'Student · 2 reviews',
+    quote: "The class is very good for all students",
+    rating: 5
+  },
+  {
+    name: 'sufiyan Khan',
+    role: 'Student',
+    quote: "Excellent Teachers and we'll furnished classroom. 🤗",
+    rating: 5
+  },
+  {
+    name: 'Preeti Kewat',
+    role: 'Student',
+    quote: "SS coaching classes is very good class",
+    rating: 5
+  },
+  {
+    name: 'SARIKA KASHIM',
+    role: 'Local Guide',
+    quote: "Good teaching pattern and excellent co ordination with students",
+    rating: 5
+  },
+  {
+    name: 'Ganesh Konar',
+    role: 'Student · 2 reviews',
+    quote: "S.S COACHING CLASSES IS VERY BEST CLASSES.",
+    rating: 5
+  },
+  {
+    name: 'MD Dilraza',
+    role: 'Student · 2 reviews',
+    quote: "Very good classes and good teaching 👍",
+    rating: 5
+  },
+  {
+    name: 'pramod tiwari',
+    role: 'Student · 2 reviews',
+    quote: "This was the best class I have ever Join",
+    rating: 5
+  },
+  {
+    name: 'Disha Jadhav',
+    role: 'Student · 2 reviews',
+    quote: "Perfect classes for commerce...qualified teachers",
+    rating: 2
+  },
+  {
+    name: 'Aniket Pal',
+    role: 'Student',
+    quote: "Excellent classes for English speaking and studies",
+    rating: 5
+  },
+  {
+    name: 'Vijay Sharma',
+    role: 'Student · 3 reviews',
+    quote: "This class so good for me to learn English",
+    rating: 5
   }
 ];
 
