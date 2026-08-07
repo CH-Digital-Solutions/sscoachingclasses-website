@@ -10,30 +10,11 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://api.resend.com/emails', {
+      await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer re_512Mq8PA_M8yxRqPNY8j9g3UBYfR9rwSq'
-        },
-        body: JSON.stringify({
-          from: 'Acme <onboarding@resend.dev>',
-          to: ['manage.ssclasses@gmail.com'],
-          subject: `New Inquiry from ${form.name} - SS Classes`,
-          html: `
-            <h2>New Inquiry from SS Coaching Classes Website</h2>
-            <p><strong>Name:</strong> ${form.name}</p>
-            <p><strong>Phone:</strong> ${form.phone}</p>
-            <p><strong>Email:</strong> ${form.email || 'Not provided'}</p>
-            <p><strong>Program:</strong> ${form.program}</p>
-            <p><strong>Message:</strong></p>
-            <p>${form.message || 'No message provided.'}</p>
-          `
-        })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
       });
-      if (!response.ok) {
-        console.error('Failed to send email:', await response.text());
-      }
     } catch (err) { console.error(err); }
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
