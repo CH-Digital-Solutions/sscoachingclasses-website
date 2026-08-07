@@ -52,7 +52,7 @@ export default function ResultsSection() {
 
         {/* Pamphlet Slider */}
         <div className="rs-pamphlet-wrap">
-          <span className="rs-toppers-label"><FaMedal className="rs-toppers-label__icon" /> Our Results 2025â€“26</span>
+          <span className="rs-toppers-label"><FaMedal className="rs-toppers-label__icon" /> Our Results 2025–26</span>
 
           <div className="rs-pamphlet-slider">
             <button className="rs-pamphlet-nav rs-pamphlet-nav--prev" onClick={() => go(-1)} aria-label="Previous">

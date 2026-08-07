@@ -16,7 +16,7 @@
     ],
     eligibility: 'Students from Class 5th to 10th',
     batchSize: '35 students per batch',
-    duration: 'Full academic year (June â€“ March)',
+    duration: 'Full academic year (June – March)',
     medium: ['Hindi', 'Semi-English', 'English'],
     color: '#1d5fd6'
   },

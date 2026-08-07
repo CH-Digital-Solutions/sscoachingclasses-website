@@ -34,10 +34,10 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Programs</h4>
             <div className="footer-links">
-              <a href="#programs">School (5thâ€“10th)</a>
-              <a href="#programs">Commerce (11thâ€“12th)</a>
-              <a href="#programs">Arts (11thâ€“12th)</a>
-              <a href="#programs">Science (11thâ€“12th)</a>
+              <a href="#programs">School (5th–10th)</a>
+              <a href="#programs">Commerce (11th–12th)</a>
+              <a href="#programs">Arts (11th–12th)</a>
+              <a href="#programs">Science (11th–12th)</a>
             </div>
           </div>
 
