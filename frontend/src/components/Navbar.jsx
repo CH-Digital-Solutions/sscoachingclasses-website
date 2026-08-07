@@ -57,7 +57,7 @@ export default function Navbar({ onEnrolClick }) {
 
   const Brand = () => (
     <a href="#home" className="nav__brand" onClick={() => setMenuOpen(false)}>
-      <img src="/SS Logo.webp" alt="SS Coaching Classes Logo" className="nav__logo-img" />
+      <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" className="nav__logo-img" />
       <span className="nav__logo-text">
         <span className="nav__logo-name">SS CLASSES</span>
       </span>

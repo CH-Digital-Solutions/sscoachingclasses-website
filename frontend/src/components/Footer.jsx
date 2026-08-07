@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand-col">
             <a href="#home" className="footer-logo">
-              <img src="/SS Logo.webp" alt="SS Coaching Classes Logo" className="footer-logo__img" />
+              <img src="/SS Logo.svg" alt="SS Coaching Classes Logo" className="footer-logo__img" />
               <span className="footer-logo-name">SS CLASSES</span>
             </a>
             <p className="footer-tagline">Nurturing curious minds since 2008. Hindi, Semi-English & English medium coaching for School & HSC Commerce.</p>
