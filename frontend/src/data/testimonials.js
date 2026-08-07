@@ -58,6 +58,96 @@ export const testimonials = [
     role: 'Student',
     quote: "Hello! I'm shivani mishra I'm the student of ss coaching classes. This classes has good management, sir and staffs are also very nice, they appreciate us very nicely.",
     rating: 5
+  },
+  {
+    name: 'Ravindra Upadhyay',
+    role: 'Student · 7 reviews',
+    quote: "Very good classes, teachers are very help to solve the issue also they do extra curriculum for students.",
+    rating: 5
+  },
+  {
+    name: 'R.S Tutorial',
+    role: 'Local Guide · 2 reviews',
+    quote: "Very nice teaching and good teachers are available. With study you will also enjoy. It will be best to join ss coaching.",
+    rating: 5
+  },
+  {
+    name: 'Master Kai',
+    role: 'Student',
+    quote: "I recently completed this English speking course now I felt like that this is one of best English speaking class that I ever see and I've great experience about this class sir teaches us in a nice way that everyone body can understand!",
+    rating: 5
+  },
+  {
+    name: 'Omkar Joshi',
+    role: 'Local Guide · 15 reviews',
+    quote: "I have studied in SS coaching classes and the teachers in the class is humble and teaching in great way. I can suggest someone who searching for best classes don't think just go head and take a admission.",
+    rating: 5
+  },
+  {
+    name: 'Gauri Makwana',
+    role: 'Student',
+    quote: "Its great pleasure to learn at ss classes with unique features. Such as sports day in a month, digital and physical study with regularly test series...",
+    rating: 5
+  },
+  {
+    name: 'Karan Bidlan',
+    role: 'Student · 8 reviews',
+    quote: "I would like to study at this class again because teachers and other staff are very polite and they help a lot. I spent a great time at this classes Thank you.",
+    rating: 5
+  },
+  {
+    name: 'Sangeeta Yadav',
+    role: 'Student',
+    quote: "He is Really A good professor. Has a indepth knowledge about the subjects he teaches. Good learning experience.",
+    rating: 5
+  },
+  {
+    name: 'Ashok Maurya',
+    role: 'Student',
+    quote: "Such an excellent class for every level of students.. Specifically passion of teacher toward students education....",
+    rating: 5
+  },
+  {
+    name: 'Indu Konar',
+    role: 'Student',
+    quote: "VERY NICE TEACHING AND GOOD TEACHERS. THE TEACHER ARE VERY FRIENDLY. THIS WAS THE BEST CLASS. I HAVE EVER JOIN. GOOD CLASSES",
+    rating: 5
+  },
+  {
+    name: 'Chandani Jha',
+    role: 'Student',
+    quote: "This is a best class ss coaching classes in this teacher are very friendly doubt solving teaching are very 😊👆🤝 very good classes.",
+    rating: 5
+  },
+  {
+    name: 'karan kumar',
+    role: 'Student · 3 reviews',
+    quote: "Best coaching classes by satish sir with an good experience must join atleast once and take an experience.",
+    rating: 5
+  },
+  {
+    name: 'Sonu Bind',
+    role: 'Student',
+    quote: "It's really happy and lucky to getting such a class. Who support me every steps of my career building... specially Satish sir.",
+    rating: 5
+  },
+  {
+    name: 'Manish Kumar',
+    role: 'Student',
+    quote: "I am growing with ss class. Specially Satish sir knowledge abt different fields so good.",
+    rating: 5
+  },
+  {
+    name: 'inder kewat',
+    role: 'Student · 3 reviews',
+    quote: "It is very help full classes teaching is very well in ss coaching CLASSes.",
+    rating: 5
+  },
+  {
+    name: 'Vicky Mohite',
+    role: 'Student',
+    quote: "I get theoretical and practical knowledge about shares and share market... Because of it now I am able to trade on stock market... Thank you.. SS",
+    rating: 5
   }
 ];
 
