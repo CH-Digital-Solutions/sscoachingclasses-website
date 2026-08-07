@@ -27,10 +27,10 @@ const emailTemplate = ({ title, badgeText, rows }) => `
           <td style="padding:36px 40px;">
             <p style="margin:0 0 24px;color:#3b4a63;font-size:15px;line-height:1.6;">You have received a new submission. Details are below:</p>
             <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
-              ${rows.map(({ label, value }, i) => `
+              ${rows.filter(r => r.value && r.value.trim() !== '').map(({ label, value }, i) => `
               <tr style="background:${i % 2 === 0 ? '#f7f9fc' : '#ffffff'};">
                 <td style="padding:14px 16px;font-size:13px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;width:35%;border-bottom:1px solid #e2e8f0;">${label}</td>
-                <td style="padding:14px 16px;font-size:15px;color:#0f1e38;font-weight:500;border-bottom:1px solid #e2e8f0;">${value || '<span style="color:#94a3b8;font-style:italic;">Not provided</span>'}</td>
+                <td style="padding:14px 16px;font-size:15px;color:#0f1e38;font-weight:500;border-bottom:1px solid #e2e8f0;">${value}</td>
               </tr>`).join('')}
             </table>
           </td>

@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="rev-track">
-          {testimonials.map((t, i) => (
+          {testimonials.slice(0, 9).map((t, i) => (
             <div key={i} className="rev-card">
               <FaQuoteRight className="rev-card__quote-mark" />
               <div className="rev-card__stars">{Array.from({ length: t.rating }).map((_, j) => <FaStar key={j} />)}</div>
@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="rev-dots">
-          {testimonials.map((_, i) => (
+          {testimonials.slice(0, 9).map((_, i) => (
             <button key={i} className={`rev-dot${i === current ? ' active' : ''}`} onClick={() => setCurrent(i)} aria-label={`Go to review ${i + 1}`} />
           ))}
         </div>
