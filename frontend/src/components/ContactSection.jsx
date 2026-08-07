@@ -24,12 +24,12 @@ export default function ContactSection() {
   return (
     <section className="contact-sec section" id="contact">
       <div className="wrap">
-        {/* Inquiry Form â€” Redesigned */}
+        {/* Inquiry Form — Redesigned */}
         <div className="inquiry-container">
           <div className="inquiry-grid">
 
 
-            {/* Right Side â€” Form */}
+            {/* Right Side — Form */}
             <div className="inquiry-form-wrap">
               {submitted ? (
                 <div className="inquiry-success">

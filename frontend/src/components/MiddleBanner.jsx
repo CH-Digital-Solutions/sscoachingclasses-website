@@ -2,7 +2,7 @@
 
 const items = [
   { icon: <FaTrophy />, title: 'Board Excellence', desc: '95% pass rate with 200+ board toppers across SSC & HSC exams.' },
-  { icon: <FaGlobe />, title: 'Multi-Medium Coaching', desc: 'Dedicated Hindi, Urdu & English medium batches â€” one of the only institutes in the area.' },
+  { icon: <FaGlobe />, title: 'Multi-Medium Coaching', desc: 'Dedicated Hindi, Urdu & English medium batches — one of the only institutes in the area.' },
   { icon: <FaChalkboardTeacher />, title: 'Expert Faculty', desc: 'Subject-specialist teachers with 10+ years of board exam coaching experience.' },
 ];
 

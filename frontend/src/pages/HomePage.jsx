@@ -30,7 +30,7 @@ export default function HomePage({ onBookDemo, onEnquire }) {
       {/* 5. English Speaking Course */}
       <EnglishSpeakingCourseSection onEnquire={onEnquire} />
 
-      {/* 6. Academic Programs for Every Level â€” rendered inside ProgramsSection */}
+      {/* 6. Academic Programs for Every Level — rendered inside ProgramsSection */}
 
       {/* 8. Results of Students */}
       <ResultsSection />

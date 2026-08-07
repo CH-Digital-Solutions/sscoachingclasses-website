@@ -9,11 +9,11 @@
   },
   {
     question: 'What are the fees, and can I pay in instalments?',
-    answer: 'Fees vary by program â€” our counsellors will share the complete fee card during consultation. We offer flexible monthly instalment plans to make quality education accessible.'
+    answer: 'Fees vary by program — our counsellors will share the complete fee card during consultation. We offer flexible monthly instalment plans to make quality education accessible.'
   },
   {
     question: 'Can we attend a free trial class first?',
-    answer: 'Yes â€” we offer a complimentary 2-day trial experience. Your child can sit in actual lectures, interact with faculty, and get a real feel for our teaching methodology before making any commitment.'
+    answer: 'Yes — we offer a complimentary 2-day trial experience. Your child can sit in actual lectures, interact with faculty, and get a real feel for our teaching methodology before making any commitment.'
   },
   {
     question: 'What are the daily batch timings?',
@@ -25,6 +25,6 @@
   },
   {
     question: 'Do you provide study material, or do we need external books?',
-    answer: 'Complete study material is provided â€” topic-wise modules, formula sheets, practice sets, and previous year papers. Our in-house content is constantly updated and sufficient for board + competitive prep.'
+    answer: 'Complete study material is provided — topic-wise modules, formula sheets, practice sets, and previous year papers. Our in-house content is constantly updated and sufficient for board + competitive prep.'
   }
 ];

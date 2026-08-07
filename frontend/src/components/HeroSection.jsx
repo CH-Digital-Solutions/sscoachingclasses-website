@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaArrowRight, FaChevronLeft, FaChevronRight, FaWhatsapp } from 'react-icons/fa';
 import StatsBar from './StatsBar';
 
@@ -27,10 +27,10 @@ export default function HeroSection({ onBookDemo }) {
         <div className="hero__grid">
           <div className="hero__content">
             <h1 className="hero__title">
-              <span className="hero__hindi-tagline">à¤à¤• à¤•à¤¦à¤® <span style={{ color: 'var(--accent)' }}>à¤¸à¤«à¤²à¤¤à¤¾</span> à¤•à¥€ à¤“à¤°</span>
+              <span className="hero__hindi-tagline">एक कदम <span style={{ color: 'var(--accent)' }}>सफलता</span> की ओर</span>
             </h1>
                 <p className="hero__desc">
-                  Hindi, Semi-English &amp; English medium coaching for School &amp; HSC Commerce â€” with expert faculty,
+                  Hindi, Semi-English &amp; English medium coaching for School &amp; HSC Commerce — with expert faculty,
                   small batches, and a proven board-topping record.
                 </p>
                 <div className="hero__btns">

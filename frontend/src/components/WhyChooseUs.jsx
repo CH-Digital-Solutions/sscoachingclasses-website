@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
         <div className="why-us-header">
           <span className="section-label">Why Choose Us</span>
           <h2 className="section-title">Best Coaching Institute in <span className="accent-text">Sion</span></h2>
-          <p className="section-subtitle">Everything your child needs to excel â€” under one roof.</p>
+          <p className="section-subtitle">Everything your child needs to excel — under one roof.</p>
         </div>
         <div className="features-grid">
           {features.map((f, i) => (

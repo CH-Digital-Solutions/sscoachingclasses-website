@@ -23,8 +23,8 @@ export default function EnglishSpeakingCourseSection({ onEnquire }) {
         {/* Speech Bubble Quote */}
         <div className="eng-quote-bubble">
           <FaQuoteLeft className="eng-quote-icon" />
-          <p>"Speak English with confidence â€” the world is waiting to hear your voice."</p>
-          <span className="eng-quote-author">â€” Prof. Satish, Lead Instructor</span>
+          <p>"Speak English with confidence — the world is waiting to hear your voice."</p>
+          <span className="eng-quote-author">— Prof. Satish, Lead Instructor</span>
         </div>
 
         {/* Main Content Grid */}

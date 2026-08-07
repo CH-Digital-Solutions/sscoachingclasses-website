@@ -32,7 +32,7 @@ export default function FounderSection() {
 
             <div className="founder-text">
               <p>
-                Founded in 2015 by Mr. Satish Maurya and Mr. Sandeep Maurya, our institute was established with a clear visionâ€”to bring a meaningful revolution to the field of education through quality teaching, academic excellence, and student-focused learning.
+                Founded in 2015 by Mr. Satish Maurya and Mr. Sandeep Maurya, our institute was established with a clear vision—to bring a meaningful revolution to the field of education through quality teaching, academic excellence, and student-focused learning.
               </p>
               <p>
                 Over the years, we have earned the trust of students and parents by providing a strong academic foundation, experienced faculty, and a supportive learning environment that helps every student achieve their full potential.
