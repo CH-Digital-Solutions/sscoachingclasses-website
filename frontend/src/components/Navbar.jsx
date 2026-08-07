@@ -23,15 +23,35 @@ export default function Navbar({ onEnrolClick }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
+  // Robust scroll lock for mobile menu (prevents iOS background scroll and jumping to top)
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = 'hidden';
+      const scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+      document.body.dataset.scrollY = scrollY; // Store it for cleanup
     } else {
-      document.body.style.overflow = '';
+      const scrollY = document.body.dataset.scrollY;
+      if (scrollY !== undefined) {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0'));
+        delete document.body.dataset.scrollY;
+      }
     }
+    
+    // Cleanup if component unmounts while menu is open
     return () => {
-      document.body.style.overflow = '';
+      const scrollY = document.body.dataset.scrollY;
+      if (scrollY !== undefined) {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0'));
+        delete document.body.dataset.scrollY;
+      }
     };
   }, [menuOpen]);
 
