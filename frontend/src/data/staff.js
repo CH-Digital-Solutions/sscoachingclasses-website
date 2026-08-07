@@ -227,7 +227,7 @@ export const staff = [
     subject: '',
     qualification: 'B.A.',
     exp: '',
-    photo: '/staff/Shashikala Bharati B.A.jpeg',
+    photo: '/staff/Shashikala Bharati BA.jpeg',
     bio: 'Ms. Shashikala Bharati is a valued faculty member at SS Coaching Classes.',
     specializations: [],
     achievements: [],
