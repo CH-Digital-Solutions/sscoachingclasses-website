@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
+﻿import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
 
 export default function FloatingButtons() {
   return (

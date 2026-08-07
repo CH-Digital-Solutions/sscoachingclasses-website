@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 import { FaCalendarAlt, FaGlobe, FaTrophy, FaUsers } from 'react-icons/fa';
 
 const stats = [

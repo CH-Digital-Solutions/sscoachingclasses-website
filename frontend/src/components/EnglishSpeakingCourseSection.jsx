@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaCheckCircle, FaMoneyBillWave, FaComments, FaMicrophone, FaGlobeAmericas, FaBookOpen, FaQuoteLeft } from 'react-icons/fa';
+﻿import { FaGraduationCap, FaCheckCircle, FaMoneyBillWave, FaComments, FaMicrophone, FaGlobeAmericas, FaBookOpen, FaQuoteLeft } from 'react-icons/fa';
 
 export default function EnglishSpeakingCourseSection({ onEnquire }) {
   return (
@@ -23,8 +23,8 @@ export default function EnglishSpeakingCourseSection({ onEnquire }) {
         {/* Speech Bubble Quote */}
         <div className="eng-quote-bubble">
           <FaQuoteLeft className="eng-quote-icon" />
-          <p>"Speak English with confidence — the world is waiting to hear your voice."</p>
-          <span className="eng-quote-author">— Prof. Satish, Lead Instructor</span>
+          <p>"Speak English with confidence â€” the world is waiting to hear your voice."</p>
+          <span className="eng-quote-author">â€” Prof. Satish, Lead Instructor</span>
         </div>
 
         {/* Main Content Grid */}
@@ -42,29 +42,29 @@ export default function EnglishSpeakingCourseSection({ onEnquire }) {
               <div className="eng-card__body">
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">Monthly</span>
-                  <span className="eng-fee-value">₹999</span>
+                  <span className="eng-fee-value">â‚¹999</span>
                 </div>
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">6 Months (Installments)</span>
-                  <span className="eng-fee-value">₹9,000</span>
+                  <span className="eng-fee-value">â‚¹9,000</span>
                 </div>
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">6 Months (One-time)</span>
-                  <span className="eng-fee-value eng-fee-value--save">₹6,000 <small>Save ₹3,000</small></span>
+                  <span className="eng-fee-value eng-fee-value--save">â‚¹6,000 <small>Save â‚¹3,000</small></span>
                 </div>
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">Yearly (Installments)</span>
-                  <span className="eng-fee-value">₹12,000</span>
+                  <span className="eng-fee-value">â‚¹12,000</span>
                 </div>
                 <div className="eng-fee-row eng-fee-row--best">
                   <span className="eng-fee-label">Yearly (One-time) <span className="eng-best-badge">BEST VALUE</span></span>
-                  <span className="eng-fee-value eng-fee-value--save">₹9,000 <small>Save ₹3,000</small></span>
+                  <span className="eng-fee-value eng-fee-value--save">â‚¹9,000 <small>Save â‚¹3,000</small></span>
                 </div>
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">Admission Fees</span>
-                  <span className="eng-fee-value">₹999</span>
+                  <span className="eng-fee-value">â‚¹999</span>
                 </div>
-                <p className="eng-fee-note">Notes (₹600), Bag (₹300), T-Shirt (₹300)</p>
+                <p className="eng-fee-note">Notes (â‚¹600), Bag (â‚¹300), T-Shirt (â‚¹300)</p>
               </div>
             </div>
 

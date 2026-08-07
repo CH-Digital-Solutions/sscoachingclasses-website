@@ -1,4 +1,4 @@
-import { FaClipboardList, FaBullseye, FaBook, FaRocket, FaPhone, FaArrowRight } from 'react-icons/fa';
+﻿import { FaClipboardList, FaBullseye, FaBook, FaRocket, FaPhone, FaArrowRight } from 'react-icons/fa';
 
 const steps = [
   { num: '01', title: 'Choose Your Program', desc: 'Select from School or HSC Commerce programs in your preferred medium.', icon: <FaClipboardList /> },

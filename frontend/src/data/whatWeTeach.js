@@ -1,4 +1,4 @@
-export const programDetails = [
+﻿export const programDetails = [
   {
     id: 'ssc',
     title: 'School Section (5th to 10th)',
@@ -16,7 +16,7 @@ export const programDetails = [
     ],
     eligibility: 'Students from Class 5th to 10th',
     batchSize: '35 students per batch',
-    duration: 'Full academic year (June – March)',
+    duration: 'Full academic year (June â€“ March)',
     medium: ['Hindi', 'Semi-English', 'English'],
     color: '#1d5fd6'
   },

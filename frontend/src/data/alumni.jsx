@@ -1,4 +1,4 @@
-import { FaStethoscope, FaLaptopCode, FaChartBar, FaBalanceScale, FaHardHat, FaBookOpen } from 'react-icons/fa';
+﻿import { FaStethoscope, FaLaptopCode, FaChartBar, FaBalanceScale, FaHardHat, FaBookOpen } from 'react-icons/fa';
 
 export const alumni = [
   {

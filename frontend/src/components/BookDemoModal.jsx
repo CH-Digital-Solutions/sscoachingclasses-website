@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { FaTimes, FaGraduationCap, FaCheckCircle, FaArrowRight, FaClock } from 'react-icons/fa';
 
 export default function BookDemoModal({ isOpen, onClose, prefilledProgram }) {
@@ -29,9 +29,9 @@ export default function BookDemoModal({ isOpen, onClose, prefilledProgram }) {
         <div className="modal__head">
           <div className="grid-pattern" />
           <button className="modal__close" onClick={onClose} aria-label="Close"><FaTimes /></button>
-          <span className="modal__eyebrow">Admissions 2026–27</span>
+          <span className="modal__eyebrow">Admissions 2026â€“27</span>
           <h2 className="modal__title"><FaGraduationCap style={{ marginRight: '.5rem' }} />Book Your Free Demo</h2>
-          <p className="modal__lead">Fill in your details – a counsellor will call you back to schedule a free demo class.</p>
+          <p className="modal__lead">Fill in your details â€“ a counsellor will call you back to schedule a free demo class.</p>
         </div>
         <div className="modal__body">
           {submitted ? (
@@ -63,7 +63,7 @@ export default function BookDemoModal({ isOpen, onClose, prefilledProgram }) {
                 </select>
               </div>
               <button type="submit" className="btn btn--primary">Request Free Consultation <FaArrowRight /></button>
-              <p className="modal__note"><FaClock /> No obligation · We reply within 24 hours</p>
+              <p className="modal__note"><FaClock /> No obligation Â· We reply within 24 hours</p>
             </form>
           )}
         </div>

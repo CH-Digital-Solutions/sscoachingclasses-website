@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaArrowRight } from 'react-icons/fa';
+﻿import { FaWhatsapp, FaArrowRight } from 'react-icons/fa';
 
 export default function LimitedSeatsBanner({ onBookDemo }) {
   return (
@@ -8,9 +8,9 @@ export default function LimitedSeatsBanner({ onBookDemo }) {
           <div className="ab-blob ab-blob--a" />
           <div className="ab-blob ab-blob--b" />
           <div className="ab-content">
-            <span className="ab-tag">Admissions 2026–27</span>
-            <h2 className="ab-title">Limited Seats Available for the 2026–27 Batch</h2>
-            <p className="ab-desc">Only 35 students per batch — secure your child's spot before admissions close.</p>
+            <span className="ab-tag">Admissions 2026â€“27</span>
+            <h2 className="ab-title">Limited Seats Available for the 2026â€“27 Batch</h2>
+            <p className="ab-desc">Only 35 students per batch â€” secure your child's spot before admissions close.</p>
             <div className="ab-btns">
               <button className="btn btn--primary btn--lg" onClick={onBookDemo}>Book Free Demo <FaArrowRight /></button>
               <a

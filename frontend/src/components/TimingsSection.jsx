@@ -1,9 +1,9 @@
-import { FaClock, FaSun, FaMoon } from 'react-icons/fa';
+﻿import { FaClock, FaSun, FaMoon } from 'react-icons/fa';
 
 const batches = [
-  { icon: <FaSun />, shift: 'Morning Batch', time: '10:00 AM – 1:00 PM', days: 'Sunday Only', classes: 'SSC & HSC' },
-  { icon: <FaClock />, shift: 'Afternoon Batch', time: '3:00 PM – 6:00 PM', days: 'Mon – Sat', classes: 'School Section (7th–10th)' },
-  { icon: <FaMoon />, shift: 'Evening Batch', time: '6:00 PM – 9:30 PM', days: 'Mon – Sat', classes: 'College Section (HSC Commerce)' },
+  { icon: <FaSun />, shift: 'Morning Batch', time: '10:00 AM â€“ 1:00 PM', days: 'Sunday Only', classes: 'SSC & HSC' },
+  { icon: <FaClock />, shift: 'Afternoon Batch', time: '3:00 PM â€“ 6:00 PM', days: 'Mon â€“ Sat', classes: 'School Section (7thâ€“10th)' },
+  { icon: <FaMoon />, shift: 'Evening Batch', time: '6:00 PM â€“ 9:30 PM', days: 'Mon â€“ Sat', classes: 'College Section (HSC Commerce)' },
 ];
 
 export default function TimingsSection() {

@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import FounderSection from '../components/FounderSection';
 import BranchesSection from '../components/BranchesSection';
 import ProgramsSection from '../components/ProgramsSection';
@@ -30,7 +30,7 @@ export default function HomePage({ onBookDemo, onEnquire }) {
       {/* 5. English Speaking Course */}
       <EnglishSpeakingCourseSection onEnquire={onEnquire} />
 
-      {/* 6. Academic Programs for Every Level — rendered inside ProgramsSection */}
+      {/* 6. Academic Programs for Every Level â€” rendered inside ProgramsSection */}
 
       {/* 8. Results of Students */}
       <ResultsSection />

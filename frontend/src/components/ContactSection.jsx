@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaCheckCircle, FaArrowRight, FaWhatsapp, FaPaperPlane, FaUserGraduate, FaHeadset } from 'react-icons/fa';
 
 const quickDepts = ['School (1st-10th)', 'HSC Commerce', 'English Speaking Course'];
@@ -24,12 +24,12 @@ export default function ContactSection() {
   return (
     <section className="contact-sec section" id="contact">
       <div className="wrap">
-        {/* Inquiry Form — Redesigned */}
+        {/* Inquiry Form â€” Redesigned */}
         <div className="inquiry-container">
           <div className="inquiry-grid">
 
 
-            {/* Right Side — Form */}
+            {/* Right Side â€” Form */}
             <div className="inquiry-form-wrap">
               {submitted ? (
                 <div className="inquiry-success">

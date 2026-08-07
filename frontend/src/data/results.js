@@ -1,4 +1,4 @@
-export const toppers = [
+﻿export const toppers = [
   {
     name: 'Anam Patni',
     percentage: '88.40%',
@@ -7,7 +7,7 @@ export const toppers = [
     rankPos: 1,
     rankNum: '1st',
     school: '1st in Citizen English School',
-    photo: '/students/anam.jpg'
+    photo: '/students/anam.webp'
   },
   {
     name: 'Sayed Nuzail Abbas',
@@ -17,7 +17,7 @@ export const toppers = [
     rankPos: 2,
     rankNum: '2nd',
     school: 'Shri Gita Vidyalay',
-    photo: '/students/nuzail.jpg'
+    photo: '/students/nuzail.webp'
   },
   {
     name: 'Sayyed Mohd Mehdi',
@@ -27,7 +27,7 @@ export const toppers = [
     rankPos: 3,
     rankNum: '3rd',
     school: 'Jafri English School',
-    photo: '/students/mehdi.jpg'
+    photo: '/students/mehdi.webp'
   },
   {
     name: 'Riya Sharma',
@@ -37,7 +37,7 @@ export const toppers = [
     rankPos: 1,
     rankNum: '1st',
     school: 'Sion Municipal School',
-    photo: '/students/riya.jpg'
+    photo: '/students/riya.webp'
   },
   {
     name: 'Arif Hussain',
@@ -47,7 +47,7 @@ export const toppers = [
     rankPos: 2,
     rankNum: '2nd',
     school: 'Anjuman-e-Islam School',
-    photo: '/students/arif.jpg'
+    photo: '/students/arif.webp'
   },
   {
     name: 'Zainab Sheikh',
@@ -57,7 +57,7 @@ export const toppers = [
     rankPos: 3,
     rankNum: '3rd',
     school: 'Sion High School',
-    photo: '/students/zainab.jpg'
+    photo: '/students/zainab.webp'
   }
 ];
 

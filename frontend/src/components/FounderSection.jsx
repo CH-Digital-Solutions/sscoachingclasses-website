@@ -1,4 +1,4 @@
-import { FaAward } from 'react-icons/fa';
+﻿import { FaAward } from 'react-icons/fa';
 
 export default function FounderSection() {
   return (
@@ -8,7 +8,7 @@ export default function FounderSection() {
           <div className="founder-media">
             <div className="founder-img-container">
               <div className="founder-img-wrapper">
-                <img src="/Prof Satish Photo.jpeg" alt="Prof. Satish Maurya - Founder, SS Coaching Classes" className="founder-img" />
+                <img src="/Prof Satish Photo.webp" alt="Prof. Satish Maurya - Founder, SS Coaching Classes" className="founder-img" />
               </div>
               <div className="founder-circle founder-circle--right">
                 <span className="founder-circle-number">20+</span>
@@ -32,7 +32,7 @@ export default function FounderSection() {
 
             <div className="founder-text">
               <p>
-                Founded in 2015 by Mr. Satish Maurya and Mr. Sandeep Maurya, our institute was established with a clear vision—to bring a meaningful revolution to the field of education through quality teaching, academic excellence, and student-focused learning.
+                Founded in 2015 by Mr. Satish Maurya and Mr. Sandeep Maurya, our institute was established with a clear visionâ€”to bring a meaningful revolution to the field of education through quality teaching, academic excellence, and student-focused learning.
               </p>
               <p>
                 Over the years, we have earned the trust of students and parents by providing a strong academic foundation, experienced faculty, and a supportive learning environment that helps every student achieve their full potential.

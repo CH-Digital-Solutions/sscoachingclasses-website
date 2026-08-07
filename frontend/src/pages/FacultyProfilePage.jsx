@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+﻿import { useParams, Link, Navigate } from 'react-router-dom';
 import { FaArrowLeft, FaGraduationCap, FaBriefcase, FaChalkboardTeacher, FaBookOpen, FaStar, FaQuoteLeft } from 'react-icons/fa';
 import { staff, fallbackAvatar } from '../data/staff';
 

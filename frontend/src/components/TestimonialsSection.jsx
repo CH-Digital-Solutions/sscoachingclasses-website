@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { FaQuoteRight, FaStar, FaPen } from 'react-icons/fa';
 import { testimonials, googleRating } from '../data/testimonials';
 
