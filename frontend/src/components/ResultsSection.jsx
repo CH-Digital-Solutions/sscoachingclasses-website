@@ -4,7 +4,7 @@ import { FaTrophy, FaMedal, FaArrowRight, FaChevronLeft, FaChevronRight, FaTimes
 import { resultStats } from '../data/results';
 
 // Result pamphlet images
-const pamphlets2025 = Array.from({ length: 11 }, (_, i) => `/results/2025-26/pamphlet-${i + 1}.jpeg`);
+const pamphlets2025 = Array.from({ length: 11 }, (_, i) => `/results/2025-26/pamphlet-${i + 1}.webp`);
 
 export default function ResultsSection() {
   const [current, setCurrent] = useState(0);

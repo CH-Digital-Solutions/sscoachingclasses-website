@@ -5,8 +5,8 @@ import { resultStats } from '../data/results';
 
 // Result pamphlet images by year
 const pamphletsByYear = {
-  '2025-26': Array.from({ length: 11 }, (_, i) => `/results/2025-26/pamphlet-${i + 1}.jpeg`),
-  '2024-25': Array.from({ length: 13 }, (_, i) => `/results/2024-25/pamphlet-${i + 1}.jpeg`),
+  '2025-26': Array.from({ length: 11 }, (_, i) => `/results/2025-26/pamphlet-${i + 1}.webp`),
+  '2024-25': Array.from({ length: 13 }, (_, i) => `/results/2024-25/pamphlet-${i + 1}.webp`),
 };
 
 const years = Object.keys(pamphletsByYear);
