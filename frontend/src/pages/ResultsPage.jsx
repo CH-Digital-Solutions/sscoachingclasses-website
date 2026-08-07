@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft, FaTrophy, FaMedal, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { resultStats } from '../data/results';

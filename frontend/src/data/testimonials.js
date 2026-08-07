@@ -1,14 +1,14 @@
-export const testimonials = [
+﻿export const testimonials = [
   {
     name: 'Pooja Jaiswal',
-    role: 'Local Guide · 147 reviews',
+    role: 'Local Guide Â· 147 reviews',
     quote: "It's a good classes for students because sir gives personal attention towards the students. very friendly environment is there with the students, sir is very helpful and he explained each and every point with understandable examples. on the whole it's good classes do join now. They teaches all kind of subjects in detail.",
     rating: 5
   },
   {
     name: 'Krishnaveni Konar',
     role: 'Student',
-    quote: "Really! It's one of the best classes for students. faculty it's good All teachers are very supportive highly experienced. They help students providing a very good quality of study material, conducting test weekly, activities etc I would like to recommend all the students to join ss classes 😊 Thank you",
+    quote: "Really! It's one of the best classes for students. faculty it's good All teachers are very supportive highly experienced. They help students providing a very good quality of study material, conducting test weekly, activities etc I would like to recommend all the students to join ss classes ðŸ˜Š Thank you",
     rating: 5
   },
   {
@@ -49,8 +49,8 @@ export const testimonials = [
   },
   {
     name: 'Rajmani Kewat',
-    role: 'Local Guide · 18 reviews',
-    quote: "It's my personal experience the profesor Satish maurya one of the great person he is well educated, and have a excellent teacher, giving motivation, career guidance and lots of enjoyment.. 😊😊 thank you..",
+    role: 'Local Guide Â· 18 reviews',
+    quote: "It's my personal experience the profesor Satish maurya one of the great person he is well educated, and have a excellent teacher, giving motivation, career guidance and lots of enjoyment.. ðŸ˜ŠðŸ˜Š thank you..",
     rating: 5
   },
   {
@@ -61,13 +61,13 @@ export const testimonials = [
   },
   {
     name: 'Ravindra Upadhyay',
-    role: 'Student · 7 reviews',
+    role: 'Student Â· 7 reviews',
     quote: "Very good classes, teachers are very help to solve the issue also they do extra curriculum for students.",
     rating: 5
   },
   {
     name: 'R.S Tutorial',
-    role: 'Local Guide · 2 reviews',
+    role: 'Local Guide Â· 2 reviews',
     quote: "Very nice teaching and good teachers are available. With study you will also enjoy. It will be best to join ss coaching.",
     rating: 5
   },
@@ -79,7 +79,7 @@ export const testimonials = [
   },
   {
     name: 'Omkar Joshi',
-    role: 'Local Guide · 15 reviews',
+    role: 'Local Guide Â· 15 reviews',
     quote: "I have studied in SS coaching classes and the teachers in the class is humble and teaching in great way. I can suggest someone who searching for best classes don't think just go head and take a admission.",
     rating: 5
   },
@@ -91,7 +91,7 @@ export const testimonials = [
   },
   {
     name: 'Karan Bidlan',
-    role: 'Student · 8 reviews',
+    role: 'Student Â· 8 reviews',
     quote: "I would like to study at this class again because teachers and other staff are very polite and they help a lot. I spent a great time at this classes Thank you.",
     rating: 5
   },
@@ -116,12 +116,12 @@ export const testimonials = [
   {
     name: 'Chandani Jha',
     role: 'Student',
-    quote: "This is a best class ss coaching classes in this teacher are very friendly doubt solving teaching are very 😊👆🤝 very good classes.",
+    quote: "This is a best class ss coaching classes in this teacher are very friendly doubt solving teaching are very ðŸ˜ŠðŸ‘†ðŸ¤ very good classes.",
     rating: 5
   },
   {
     name: 'karan kumar',
-    role: 'Student · 3 reviews',
+    role: 'Student Â· 3 reviews',
     quote: "Best coaching classes by satish sir with an good experience must join atleast once and take an experience.",
     rating: 5
   },
@@ -139,7 +139,7 @@ export const testimonials = [
   },
   {
     name: 'inder kewat',
-    role: 'Student · 3 reviews',
+    role: 'Student Â· 3 reviews',
     quote: "It is very help full classes teaching is very well in ss coaching CLASSes.",
     rating: 5
   },
@@ -151,13 +151,13 @@ export const testimonials = [
   },
   {
     name: 'Ajruddin darji',
-    role: 'Student · 3 reviews',
+    role: 'Student Â· 3 reviews',
     quote: "Good qualified teacher in this class. If u join this class u will get 100% result.",
     rating: 5
   },
   {
     name: 'MD Naimajul',
-    role: 'Student · 2 reviews',
+    role: 'Student Â· 2 reviews',
     quote: "Best classes in GTB Nagar Sion koliwada...with excellent teachers",
     rating: 5
   },
@@ -169,14 +169,14 @@ export const testimonials = [
   },
   {
     name: 'Kajal Mishra',
-    role: 'Student · 4 reviews',
+    role: 'Student Â· 4 reviews',
     quote: "Very qualified teachers are available. you will see 100% good results.",
     rating: 4
   },
   {
     name: 'Rekha Churasiya',
     role: 'Student',
-    quote: "Nice lecture and teacher ya sir padae achi hute hai 🙏👩",
+    quote: "Nice lecture and teacher ya sir padae achi hute hai ðŸ™ðŸ‘©",
     rating: 5
   },
   {
@@ -193,25 +193,25 @@ export const testimonials = [
   },
   {
     name: 'Sarita Ram Vishwash Chaurasia',
-    role: 'Local Guide · 7 reviews',
-    quote: "★ Friendly Teachers. ★ Clear Every Doubt. ★ Very Helpful To Students.",
+    role: 'Local Guide Â· 7 reviews',
+    quote: "â˜… Friendly Teachers. â˜… Clear Every Doubt. â˜… Very Helpful To Students.",
     rating: 5
   },
   {
     name: 'Rohan Ughade',
-    role: 'Student · 2 reviews',
+    role: 'Student Â· 2 reviews',
     quote: "I am so lucky to get such an outstanding class with future oriented studies",
     rating: 5
   },
   {
     name: 'Yash Bashire',
-    role: 'Student · 2 reviews',
-    quote: "Good classes with good teachers and also organizes sports events 👍",
+    role: 'Student Â· 2 reviews',
+    quote: "Good classes with good teachers and also organizes sports events ðŸ‘",
     rating: 5
   },
   {
     name: 'Ashraf ali shaikh',
-    role: 'Student · 6 reviews',
+    role: 'Student Â· 6 reviews',
     quote: "I feel very glad that I learned from ss coaching classes",
     rating: 5
   },
@@ -235,14 +235,14 @@ export const testimonials = [
   },
   {
     name: 'Joshna Chaudhary',
-    role: 'Student · 2 reviews',
+    role: 'Student Â· 2 reviews',
     quote: "The class is very good for all students",
     rating: 5
   },
   {
     name: 'sufiyan Khan',
     role: 'Student',
-    quote: "Excellent Teachers and we'll furnished classroom. 🤗",
+    quote: "Excellent Teachers and we'll furnished classroom. ðŸ¤—",
     rating: 5
   },
   {
@@ -259,25 +259,25 @@ export const testimonials = [
   },
   {
     name: 'Ganesh Konar',
-    role: 'Student · 2 reviews',
+    role: 'Student Â· 2 reviews',
     quote: "S.S COACHING CLASSES IS VERY BEST CLASSES.",
     rating: 5
   },
   {
     name: 'MD Dilraza',
-    role: 'Student · 2 reviews',
-    quote: "Very good classes and good teaching 👍",
+    role: 'Student Â· 2 reviews',
+    quote: "Very good classes and good teaching ðŸ‘",
     rating: 5
   },
   {
     name: 'pramod tiwari',
-    role: 'Student · 2 reviews',
+    role: 'Student Â· 2 reviews',
     quote: "This was the best class I have ever Join",
     rating: 5
   },
   {
     name: 'Disha Jadhav',
-    role: 'Student · 2 reviews',
+    role: 'Student Â· 2 reviews',
     quote: "Perfect classes for commerce...qualified teachers",
     rating: 2
   },
@@ -289,7 +289,7 @@ export const testimonials = [
   },
   {
     name: 'Vijay Sharma',
-    role: 'Student · 3 reviews',
+    role: 'Student Â· 3 reviews',
     quote: "This class so good for me to learn English",
     rating: 5
   }

@@ -1,4 +1,4 @@
-import { programs } from '../data/programs';
+﻿import { programs } from '../data/programs';
 import { FaArrowRight } from 'react-icons/fa';
 
 export default function ProgramsSection({ onEnquire }) {

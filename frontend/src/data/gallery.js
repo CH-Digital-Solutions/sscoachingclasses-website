@@ -1,4 +1,4 @@
-export const galleryImages = [
+﻿export const galleryImages = [
   {
     "id": 1,
     "src": "/gallery/photos/WhatsApp%20Image%202026-07-18%20at%201.06.37%20AM.webp",

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { staff, fallbackAvatar } from '../data/staff';
 
 const StaffCard = ({ s }) => (

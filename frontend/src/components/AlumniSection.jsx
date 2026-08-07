@@ -1,4 +1,4 @@
-import { alumni } from '../data/alumni';
+﻿import { alumni } from '../data/alumni';
 
 export default function AlumniSection() {
   return (
