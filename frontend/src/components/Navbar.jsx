@@ -16,6 +16,8 @@ const navLinks = [
 export default function Navbar({ onEnrolClick }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isDarkPage = location.pathname.startsWith('/faculty');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -65,7 +67,7 @@ export default function Navbar({ onEnrolClick }) {
   );
 
   return (
-    <nav className={`nav${scrolled ? ' nav--solid' : ''}`}>
+    <nav className={`nav${scrolled ? ' nav--solid' : ''}${isDarkPage && !scrolled ? ' nav--dark-page' : ''}`}>
       <div className="nav__row wrap">
         <Brand />
 
