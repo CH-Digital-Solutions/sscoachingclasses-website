@@ -8,7 +8,7 @@ export default function FounderSection() {
           <div className="founder-media">
             <div className="founder-img-container">
               <div className="founder-img-wrapper">
-                <img src="/Prof Satish Photo.webp" alt="Prof. Satish Maurya - Founder, SS Coaching Classes" className="founder-img" loading="lazy" />
+                <img src="/Prof Satish Maurya Final.png" alt="Prof. Satish Maurya - Founder, SS Coaching Classes" className="founder-img" loading="lazy" />
               </div>
               <div className="founder-circle founder-circle--right">
                 <span className="founder-circle-number">20+</span>

@@ -1,4 +1,4 @@
-﻿export const staff = [
+export const staff = [
   {
     id: 'satish-maurya',
     name: 'Prof. Satish Maurya',
@@ -6,7 +6,7 @@
     subject: 'All Subjects',
     qualification: 'B.Com, M.Com, UGC NET',
     exp: '15+ years',
-    photo: '/staff/Prof. Satish Maurya B.Com,M.Com,UGC NET.webp',
+    photo: '/Prof Satish Maurya Final.png',
     bio: 'Prof. Satish Maurya is the visionary founder of SS Coaching Classes. He has a passion for teaching and commitment to student success that has transformed the academic journeys of thousands of students.',
     specializations: ['Student Mentoring', 'Academic Planning', 'Career Counseling'],
     achievements: ['Founded SS Coaching Classes', 'Mentored thousands of students'],
