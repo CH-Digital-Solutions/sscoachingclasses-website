@@ -261,8 +261,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; lin
 .founder-media { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; gap: 1.5rem; }
 .founder-media::before { content: ''; position: absolute; width: 100%; height: 100%; max-width: 400px; max-height: 400px; background: radial-gradient(circle at center, rgba(29,95,214,.15) 0%, transparent 70%); z-index: 0; }
 .founder-img-container { position: relative; z-index: 1; max-width: 360px; width: 100%; }
-.founder-img-wrapper { position: relative; width: 100%; aspect-ratio: 3.5 / 4; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; border-radius: var(--radius-xl); z-index: 1; padding-top: 2rem; }
-.founder-img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; transition: transform .5s var(--ease); }
+.founder-img-wrapper { position: relative; width: 100%; aspect-ratio: 3.5 / 4; display: flex; align-items: flex-end; justify-content: center; overflow: visible; z-index: 1; padding-top: 2rem; }
+.founder-img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; border-radius: var(--radius-xl); transition: transform .5s var(--ease); }
 .founder-img-wrapper:hover .founder-img { transform: scale(1.05); }
 .founder-name-label { position: relative; z-index: 1; font-family: var(--font-display); font-size: 1.75rem; font-weight: 800; text-align: center; color: var(--text-dark); background: linear-gradient(135deg, var(--primary), var(--primary-deep)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: .5rem; }
 .founder-circle { position: absolute; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 12px 28px rgba(29,95,214,.4); border: 4px solid var(--white); z-index: 4; transition: transform .3s ease; }
