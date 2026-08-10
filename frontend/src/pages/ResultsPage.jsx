@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft, FaTrophy, FaMedal, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { resultStats } from '../data/results';
@@ -79,15 +79,13 @@ export default function ResultsPage() {
                 className="rp-pamphlet-card"
                 onClick={() => setLightbox(i)}
               >
-                <div
-                  className="rp-pamphlet-card__blur"
-                  style={{ backgroundImage: `url("${img}")` }}
-                />
+                <div className="rp-pamphlet-card__overlay" />
                 <img
                   src={img}
                   alt={`${activeYear} Result ${i + 1}`}
                   className="rp-pamphlet-card__img"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}

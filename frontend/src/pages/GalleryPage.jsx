@@ -1,19 +1,22 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaImages, FaArrowLeft, FaTimes, FaChevronLeft, FaChevronRight, FaSearch } from 'react-icons/fa';
 import { galleryImages } from '../data/gallery';
+import useProgressiveLoad from '../hooks/useProgressiveLoad';
 
 export default function GalleryPage() {
   const [lightbox, setLightbox] = useState({ open: false, index: 0 });
 
-  const filtered = galleryImages;
+  // Progressive loading: show 20 initially, load 16 more per scroll
+  const { visibleItems: filtered, sentinelRef, hasMore } = useProgressiveLoad(galleryImages, 20, 16);
 
   const openLightbox = (index) => setLightbox({ open: true, index });
   const closeLightbox = () => setLightbox({ open: false, index: 0 });
   const navigateLightbox = (dir) => {
+    // Navigate through ALL images (not just visible), so lightbox can explore the full gallery
     setLightbox(prev => ({
       ...prev,
-      index: (prev.index + dir + filtered.length) % filtered.length
+      index: (prev.index + dir + galleryImages.length) % galleryImages.length
     }));
   };
 
@@ -55,7 +58,7 @@ export default function GalleryPage() {
         <div className="wrap">
           {/* Filter Bar */}
           <div className="gp-filter-bar">
-            <span className="gp-showing">{filtered.length} photos</span>
+            <span className="gp-showing">{galleryImages.length} photos</span>
           </div>
 
           {/* Masonry Grid */}
@@ -66,7 +69,7 @@ export default function GalleryPage() {
                 className={`gp-item${i % 7 === 0 ? ' gp-item--tall' : ''}${i % 5 === 2 ? ' gp-item--wide' : ''}`}
                 onClick={() => openLightbox(i)}
               >
-                <img src={img.src} alt={img.alt} loading="lazy" />
+                <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
                 <div className="gp-item__overlay">
                   <div className="gp-item__zoom"><FaSearch /></div>
                   <div className="gp-item__info">
@@ -76,16 +79,24 @@ export default function GalleryPage() {
               </div>
             ))}
           </div>
+
+          {/* Scroll sentinel for progressive loading */}
+          {hasMore && (
+            <div ref={sentinelRef} className="gp-load-more">
+              <div className="gp-load-spinner" />
+              <span>Loading more photos...</span>
+            </div>
+          )}
         </div>
       </section>
 
       {/* Lightbox */}
-      {lightbox.open && filtered[lightbox.index] && (
+      {lightbox.open && galleryImages[lightbox.index] && (
         <div className="gallery-lightbox" onClick={closeLightbox}>
           <div className="gallery-lightbox__inner" onClick={e => e.stopPropagation()}>
             <img
-              src={filtered[lightbox.index].src}
-              alt={filtered[lightbox.index].alt}
+              src={galleryImages[lightbox.index].src}
+              alt={galleryImages[lightbox.index].alt}
               className="gallery-lightbox__img"
             />
             <button className="gallery-lightbox__close" onClick={closeLightbox} aria-label="Close">
@@ -106,8 +117,8 @@ export default function GalleryPage() {
               <FaChevronRight />
             </button>
             <div className="gallery-lightbox__caption">
-              <p>{filtered[lightbox.index].alt}</p>
-              <span>{lightbox.index + 1} / {filtered.length}</span>
+              <p>{galleryImages[lightbox.index].alt}</p>
+              <span>{lightbox.index + 1} / {galleryImages.length}</span>
             </div>
           </div>
         </div>
@@ -115,4 +126,3 @@ export default function GalleryPage() {
     </>
   );
 }
-

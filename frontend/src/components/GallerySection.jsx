@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaImages, FaArrowRight } from 'react-icons/fa';
 import { galleryImages } from '../data/gallery';
 
@@ -31,7 +31,7 @@ export default function GallerySection() {
               key={img.id}
               className={`gallery-item${i % 5 === 0 ? ' gallery-item--wide' : ''}`}
             >
-              <img src={img.src} alt={img.alt} loading="lazy" />
+              <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
               <div className="gallery-item__overlay">
                 <span className="gallery-item__caption">{img.alt}</span>
               </div>

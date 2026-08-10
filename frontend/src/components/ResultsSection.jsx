@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTrophy, FaMedal, FaArrowRight, FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 import { resultStats } from '../data/results';
@@ -23,6 +23,13 @@ export default function ResultsSection() {
       document.body.style.overflow = '';
     };
   }, [lightbox]);
+
+  // Only render 3 slides in DOM: previous, current, next
+  const visibleIndices = useMemo(() => {
+    const prev = (current - 1 + images.length) % images.length;
+    const next = (current + 1) % images.length;
+    return [prev, current, next];
+  }, [current, images.length]);
 
   return (
     <>
@@ -60,21 +67,19 @@ export default function ResultsSection() {
             </button>
 
             <div className="rs-pamphlet-viewport">
-              {images.map((img, i) => (
+              {visibleIndices.map((i) => (
                 <div
                   key={i}
                   className={`rs-pamphlet-slide${i === current ? ' active' : ''}`}
                   onClick={() => setLightbox(i)}
                 >
-                  <div
-                    className="rs-pamphlet-blur"
-                    style={{ backgroundImage: `url("${img}")` }}
-                  />
+                  <div className="rs-pamphlet-overlay" />
                   <img
-                    src={img}
+                    src={images[i]}
                     alt={`SS Classes Result ${i + 1}`}
                     className="rs-pamphlet-img"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}

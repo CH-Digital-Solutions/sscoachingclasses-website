@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Fonts are loaded via <link> in index.html for best performance — no @import here */
 
 :root {
-  --font-display: "Plus Jakarta Sans", sans-serif;
-  --font-body: "Inter", -apple-system, sans-serif;
+  /* Fallback stacks are ordered to be visually close to the Google Fonts */
+  --font-display: "Plus Jakarta Sans", "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   /* Classic professional BLUE (dominant) + warm Orange accent */
   --primary: #1d5fd6;
@@ -185,9 +186,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; lin
 .hero__btns .btn { width: 100%; }
 .hero__media { position: relative; max-width: 520px; margin: 0 auto; width: 100%; }
 .hero__photo { position: relative; aspect-ratio: 4 / 3.2; border-radius: var(--radius-lg); overflow: hidden; background: #111; }
-.hero__slide { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease-in-out; display: flex; align-items: center; justify-content: center; }
+.hero__slide { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease-in-out; display: flex; align-items: center; justify-content: center; will-change: opacity; }
 .hero__slide.active { opacity: 1; }
-.hero__slide-blur { position: absolute; inset: -20px; background-size: cover; background-position: center; filter: blur(20px) brightness(.6); transform: scale(1.15); z-index: 0; }
+.hero__slide-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,31,63,.55) 0%, rgba(29,95,214,.25) 100%); z-index: 0; }
 .hero__slide-img { position: relative; z-index: 1; max-width: 100%; max-height: 100%; width: auto; height: 100%; object-fit: contain; display: block; margin: 0 auto; }
 .hero__nav { position: absolute; bottom: 1rem; right: 1rem; display: flex; gap: .5rem; z-index: 10; }
 .hero__nav-btn { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.85); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,.5); color: var(--text-dark); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; cursor: pointer; transition: all .2s var(--ease); }
@@ -711,9 +712,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; lin
 .rs-pamphlet-wrap { margin-bottom: var(--gap-xl); }
 .rs-pamphlet-slider { position: relative; display: flex; align-items: center; gap: 1rem; }
 .rs-pamphlet-viewport { position: relative; width: 100%; aspect-ratio: 3 / 4; max-width: 480px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; background: #111; }
-.rs-pamphlet-slide { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease-in-out; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.rs-pamphlet-slide { position: absolute; inset: 0; opacity: 0; transition: opacity .6s ease-in-out; display: flex; align-items: center; justify-content: center; cursor: pointer; will-change: opacity; }
 .rs-pamphlet-slide.active { opacity: 1; }
-.rs-pamphlet-blur { position: absolute; inset: -20px; background-size: cover; background-position: center; filter: blur(20px) brightness(.6); transform: scale(1.15); z-index: 0; }
+.rs-pamphlet-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,31,63,.55) 0%, rgba(29,95,214,.25) 100%); z-index: 0; }
 .rs-pamphlet-img { position: relative; z-index: 1; max-width: 100%; max-height: 100%; width: auto; height: 100%; object-fit: contain; display: block; margin: 0 auto; }
 .rs-pamphlet-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.9); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,.5); color: var(--text-dark); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; cursor: pointer; transition: all .2s var(--ease); }
 .rs-pamphlet-nav:hover { background: var(--white); color: var(--primary); }
@@ -889,7 +890,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; lin
 .rp-pamphlet-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .rp-pamphlet-card { position: relative; border-radius: var(--radius-lg); overflow: hidden; background: #111; cursor: pointer; aspect-ratio: 3 / 4; transition: all .4s var(--ease); border: 1px solid var(--border); }
 .rp-pamphlet-card:hover { transform: translateY(-4px); border-color: var(--primary); }
-.rp-pamphlet-card__blur { position: absolute; inset: -20px; background-size: cover; background-position: center; filter: blur(20px) brightness(.5); transform: scale(1.15); z-index: 0; }
+.rp-pamphlet-card__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,31,63,.45) 0%, rgba(29,95,214,.2) 100%); z-index: 0; }
 .rp-pamphlet-card__img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; display: block; }
 @media (min-width: 640px) { .rp-pamphlet-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }
 @media (min-width: 992px) { .rp-pamphlet-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
@@ -997,3 +998,22 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; lin
 @media (prefers-reduced-motion: reduce) {
   .reveal-init { transition: none; opacity: 1; transform: none; }
 }
+
+/* ===================== CONTENT-VISIBILITY (PERFORMANCE) ===================== */
+/* Let the browser skip rendering sections far below the fold */
+.founder-sec, .staff-sec, .eng-sec, .gallery-sec, .rev-sec, .faq-sec {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* ===================== PROGRESSIVE GALLERY LOADING ===================== */
+.gp-load-more {
+  display: flex; align-items: center; justify-content: center; gap: .75rem;
+  padding: 2rem 0; color: var(--text-muted); font-size: .9rem;
+}
+.gp-load-spinner {
+  width: 24px; height: 24px; border: 3px solid var(--border);
+  border-top-color: var(--primary); border-radius: 50%;
+  animation: gpSpin 0.8s linear infinite;
+}
+@keyframes gpSpin { to { transform: rotate(360deg); } }

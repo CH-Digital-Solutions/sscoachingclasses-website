@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { FaArrowRight, FaChevronLeft, FaChevronRight, FaWhatsapp } from 'react-icons/fa';
 import StatsBar from './StatsBar';
 
 import { galleryImages } from '../data/gallery';
 
-// Gallery photos for hero carousel
-const heroImages = galleryImages.map(img => img.src);
+// Only use first 10 gallery photos for the hero carousel (not all 125!)
+const HERO_SLIDE_COUNT = 10;
+const heroImages = galleryImages.slice(0, HERO_SLIDE_COUNT).map(img => img.src);
 
 
 export default function HeroSection({ onBookDemo }) {
@@ -17,6 +18,13 @@ export default function HeroSection({ onBookDemo }) {
   }, []);
 
   const go = (dir) => setCurrent(p => (p + dir + heroImages.length) % heroImages.length);
+
+  // Only render 3 slides in the DOM: previous, current, next
+  const visibleIndices = useMemo(() => {
+    const prev = (current - 1 + heroImages.length) % heroImages.length;
+    const next = (current + 1) % heroImages.length;
+    return [prev, current, next];
+  }, [current]);
 
   return (
     <section className="hero" id="home">
@@ -49,20 +57,19 @@ export default function HeroSection({ onBookDemo }) {
 
               <div className="hero__media">
                 <div className="hero__photo">
-                  {heroImages.map((img, i) => (
+                  {visibleIndices.map((i) => (
                     <div
                       key={i}
                       className={`hero__slide${i === current ? ' active' : ''}`}
                     >
-                      <div
-                        className="hero__slide-blur"
-                        style={{ backgroundImage: `url("${img}")` }}
-                      />
+                      <div className="hero__slide-overlay" />
                       <img
-                        src={img}
+                        src={heroImages[i]}
                         alt={`SS Classes Gallery Photo ${i + 1}`}
                         className="hero__slide-img"
-                        loading={i === 0 ? 'eager' : 'lazy'}
+                        loading={i === current ? 'eager' : 'lazy'}
+                        decoding="async"
+                        fetchPriority={i === current ? 'high' : 'low'}
                       />
                     </div>
                   ))}
