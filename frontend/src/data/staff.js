@@ -117,19 +117,6 @@ export const staff = [
     quote: ''
   },
   {
-    id: 'ishita-gupta',
-    name: 'Ishita Gupta',
-    role: 'Manager',
-    subject: '',
-    qualification: 'B.Com.',
-    exp: '',
-    photo: '/staff/Ishita Gupta B.Com. (Manager).webp',
-    bio: 'Ms. Ishita Gupta manages the operations and ensures smooth functioning of the institution.',
-    specializations: ['Management', 'Operations'],
-    achievements: [],
-    quote: ''
-  },
-  {
     id: 'kajal-mishra',
     name: 'Kajal Mishra',
     role: 'Faculty',
@@ -139,19 +126,6 @@ export const staff = [
     photo: '/staff/Kajal Mishra B.Com, D.ed.webp',
     bio: 'Ms. Kajal Mishra is a dedicated faculty member committed to academic excellence.',
     specializations: [],
-    achievements: [],
-    quote: ''
-  },
-  {
-    id: 'nagama-shaikh',
-    name: 'Nagama Shaikh',
-    role: 'Assistant Manager',
-    subject: '',
-    qualification: 'BSc',
-    exp: '',
-    photo: '/staff/Nagama Shaikh BSc ( Assistant manager).webp',
-    bio: 'Ms. Nagama Shaikh assists in managing operations and administrative workflows.',
-    specializations: ['Administration', 'Support'],
     achievements: [],
     quote: ''
   },
