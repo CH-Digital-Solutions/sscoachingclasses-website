@@ -17,7 +17,8 @@ export default function Navbar({ onEnrolClick }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const isDarkPage = location.pathname.startsWith('/faculty');
+  // Only individual faculty detail pages with dark heroes need light text; /faculty list page uses standard dark text
+  const isDarkPage = location.pathname.startsWith('/faculty/') && location.pathname !== '/faculty';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -57,13 +58,38 @@ export default function Navbar({ onEnrolClick }) {
     };
   }, [menuOpen]);
 
+  const handleLogoClick = (e) => {
+    setMenuOpen(false);
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNavLinkClick = (e, href) => {
+    setMenuOpen(false);
+    if (href === '#home') {
+      if (location.pathname === '/') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  };
+
+  const getNavHref = (href) => {
+    if (location.pathname === '/') {
+      return href;
+    }
+    return `/${href}`;
+  };
+
   const Brand = () => (
-    <a href="#home" className="nav__brand" onClick={() => setMenuOpen(false)}>
+    <Link to="/" className="nav__brand" onClick={handleLogoClick} aria-label="SS Coaching Classes Home">
       <img src="/SS Logo.webp" alt="SS Coaching Classes Logo" className="nav__logo-img" />
       <span className="nav__logo-text">
         <span className="nav__logo-name">SS CLASSES</span>
       </span>
-    </a>
+    </Link>
   );
 
   return (
@@ -73,7 +99,15 @@ export default function Navbar({ onEnrolClick }) {
 
         <ul className="nav__links">
           {navLinks.map(l => (
-            <li key={l.href}><a href={l.href} className="nav__link">{l.label}</a></li>
+            <li key={l.href}>
+              <a
+                href={getNavHref(l.href)}
+                className="nav__link"
+                onClick={(e) => handleNavLinkClick(e, l.href)}
+              >
+                {l.label}
+              </a>
+            </li>
           ))}
         </ul>
 
@@ -98,7 +132,14 @@ export default function Navbar({ onEnrolClick }) {
           </div>
           <div className="nav__mobile-links">
             {navLinks.map(l => (
-              <a key={l.href} href={l.href} className="nav__mobile-link" onClick={() => setMenuOpen(false)}>{l.label}</a>
+              <a
+                key={l.href}
+                href={getNavHref(l.href)}
+                className="nav__mobile-link"
+                onClick={(e) => handleNavLinkClick(e, l.href)}
+              >
+                {l.label}
+              </a>
             ))}
           </div>
           <div className="nav__mobile-actions">

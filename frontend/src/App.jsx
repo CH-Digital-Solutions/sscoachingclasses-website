@@ -10,6 +10,7 @@ import WhatWeTeachPage from './pages/WhatWeTeachPage';
 import ResultsPage from './pages/ResultsPage';
 import GalleryPage from './pages/GalleryPage';
 import FacultyProfilePage from './pages/FacultyProfilePage';
+import FacultyPage from './pages/FacultyPage';
 
 function ScrollReveal() {
   const { pathname } = useLocation();
@@ -68,6 +69,7 @@ export default function App() {
         <Route path="/what-we-teach" element={<WhatWeTeachPage onEnquire={openModal} />} />
         <Route path="/results" element={<ResultsPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/faculty/:id" element={<FacultyProfilePage />} />
       </Routes>
       <Footer />

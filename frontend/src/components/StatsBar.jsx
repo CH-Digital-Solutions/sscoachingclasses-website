@@ -1,11 +1,11 @@
-﻿import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaCalendarAlt, FaGlobe, FaTrophy, FaUsers } from 'react-icons/fa';
 
 const stats = [
   { icon: <FaCalendarAlt />, value: 18, suffix: '+', label: 'Years of Excellence' },
   { icon: <FaGlobe />, value: 3, suffix: '', label: 'Language Mediums' },
   { icon: <FaTrophy />, value: 200, suffix: '+', label: 'Top Board Scorers' },
-  { icon: <FaUsers />, value: 35, suffix: '', label: 'Students / Batch' },
+  { icon: <FaUsers />, text: 'Limited', label: 'Batch Size · Personal Attention' },
 ];
 
 function AnimatedNumber({ target, suffix }) {
@@ -41,7 +41,10 @@ export default function StatsBar() {
         <div key={i} className="hero__stat">
           <span className="hero__stat-icon">{s.icon}</span>
           <span className="hero__stat-text">
-            <AnimatedNumber target={s.value} suffix={s.suffix} />
+            {s.text !== undefined
+              ? <span className="hero__stat-val">{s.text}</span>
+              : <AnimatedNumber target={s.value} suffix={s.suffix} />
+            }
             <span className="hero__stat-lbl">{s.label}</span>
           </span>
         </div>

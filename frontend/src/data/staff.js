@@ -5,7 +5,7 @@ export const staff = [
     role: 'Founder',
     subject: 'All Subjects',
     qualification: 'B.Com, M.Com, UGC NET',
-    exp: '15+ years',
+    exp: '20+ years',
     photo: '/Prof Satish Maurya Final.png',
     bio: 'Prof. Satish Maurya is the visionary founder of SS Coaching Classes. He has a passion for teaching and commitment to student success that has transformed the academic journeys of thousands of students.',
     specializations: ['Student Mentoring', 'Academic Planning', 'Career Counseling'],
@@ -89,19 +89,6 @@ export const staff = [
     specializations: ['Commerce', 'Law', 'Business Studies'],
     achievements: ['Simplifies complex legal and commercial terms', 'Provides practical industry examples'],
     quote: 'Success is not final, failure is not fatal: it is the courage to continue that counts.'
-  },
-  {
-    id: 'arun-kumar',
-    name: 'Arun Kumar',
-    role: 'Faculty',
-    subject: '',
-    qualification: 'B.A, B.ed',
-    exp: '',
-    photo: '/staff/Arun Kumar B.A, B.ed.webp',
-    bio: 'Mr. Arun Kumar is a dedicated faculty member committed to academic excellence.',
-    specializations: [],
-    achievements: [],
-    quote: ''
   },
   {
     id: 'isha-mishra',

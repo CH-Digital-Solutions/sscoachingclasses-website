@@ -1,15 +1,20 @@
+import { Link } from 'react-router-dom';
 import { FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGoogle } from 'react-icons/fa';
 
 export default function Footer() {
+  const scrollToHero = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer">
       <div className="wrap">
         <div className="footer-grid">
           <div className="footer-brand-col">
-            <a href="#home" className="footer-logo">
+            <Link to="/" className="footer-logo" onClick={scrollToHero} aria-label="SS Coaching Classes Home">
               <img src="/SS Logo.webp" alt="SS Coaching Classes Logo" className="footer-logo__img" />
               <span className="footer-logo-name">SS CLASSES</span>
-            </a>
+            </Link>
             <p className="footer-tagline">Nurturing curious minds since 2008. Hindi, Semi-English & English medium coaching for School & HSC Commerce.</p>
             <div className="footer-socials">
               <a href="https://www.instagram.com/ssclassesprofsatish?utm_source=qr&igsh=bzljYXYwOTU3azg=" target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="Instagram"><FaInstagram /></a>
@@ -21,13 +26,13 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Quick Links</h4>
             <div className="footer-links">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#programs">Programs</a>
-              <a href="#results">Results</a>
-              <a href="#gallery">Gallery</a>
-              <a href="#faq">FAQ</a>
-              <a href="#contact">Contact</a>
+              <Link to="/" onClick={scrollToHero}>Home</Link>
+              <a href="/#about">About</a>
+              <a href="/#programs">Programs</a>
+              <a href="/#results">Results</a>
+              <Link to="/gallery">Gallery</Link>
+              <a href="/#faq">FAQ</a>
+              <a href="/#contact">Contact</a>
             </div>
           </div>
 

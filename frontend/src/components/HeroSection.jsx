@@ -38,8 +38,8 @@ export default function HeroSection({ onBookDemo }) {
               <span className="hero__hindi-tagline">एक कदम <span style={{ color: 'var(--accent)' }}>सफलता</span> की ओर</span>
             </h1>
                 <p className="hero__desc">
-                  Hindi, Semi-English &amp; English medium coaching for School &amp; HSC Commerce — with expert faculty,
-                  small batches, and a proven board-topping record.
+                  Trusted by <strong>3,000+ students</strong> across Hindi, Semi-English &amp; English medium —
+                  School &amp; HSC Commerce coaching with expert faculty, small batches, and a proven board-topping record.
                 </p>
                 <div className="hero__btns">
                   <button className="btn btn--primary btn--lg" onClick={onBookDemo}>
