@@ -3,6 +3,7 @@ import FounderSection from '../components/FounderSection';
 import BranchesSection from '../components/BranchesSection';
 import ProgramsSection from '../components/ProgramsSection';
 import EnglishSpeakingCourseSection from '../components/EnglishSpeakingCourseSection';
+import TimingsSection from '../components/TimingsSection';
 import StaffSection from '../components/StaffSection';
 import ResultsSection from '../components/ResultsSection';
 import LimitedSeatsBanner from '../components/LimitedSeatsBanner';
@@ -31,7 +32,8 @@ export default function HomePage({ onBookDemo, onEnquire }) {
       {/* 5. English Speaking Course */}
       <EnglishSpeakingCourseSection onEnquire={onEnquire} />
 
-      {/* 6. Academic Programs for Every Level — rendered inside ProgramsSection */}
+      {/* 6. Batch Timings Schedule */}
+      <TimingsSection />
 
       {/* 8. Results of Students */}
       <ResultsSection />

@@ -39,7 +39,7 @@ export default function HeroSection({ onBookDemo }) {
             </h1>
                 <p className="hero__desc">
                   Trusted by <strong>3,000+ students</strong> across Hindi, Semi-English &amp; English medium —
-                  School &amp; HSC Commerce coaching with expert faculty, small batches, and a proven board-topping record.
+                  School &amp; HSC Commerce coaching with expert faculty, limited batch sizes with personal attention, and a proven board-topping record.
                 </p>
                 <div className="hero__btns">
                   <button className="btn btn--primary btn--lg" onClick={onBookDemo}>

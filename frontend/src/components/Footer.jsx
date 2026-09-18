@@ -49,7 +49,9 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Contact</h4>
             <div className="footer-links">
-              <p><FaMapMarkerAlt /> Vivekanand Society, near sardar nagar no 02 Bus stop, Sion Koliwada, Mumbai -37</p>
+              <a href="https://maps.app.goo.gl/UxZdA6s6CuE1X4Mr5" target="_blank" rel="noopener noreferrer">
+                <FaMapMarkerAlt /> Vivekanand Society, near sardar nagar no 02 Bus stop, Sion Koliwada, Mumbai -37
+              </a>
               <a href="tel:+918080714141"><FaPhoneAlt /> +91 80807 14141</a>
               <a href="mailto:info@sscoachingclasses.in"><FaEnvelope /> info@sscoachingclasses.in</a>
             </div>

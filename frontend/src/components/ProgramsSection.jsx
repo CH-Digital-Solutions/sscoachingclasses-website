@@ -1,5 +1,5 @@
-﻿import { programs } from '../data/programs';
-import { FaArrowRight } from 'react-icons/fa';
+import { programs } from '../data/programs';
+import { FaArrowRight, FaClock } from 'react-icons/fa';
 
 export default function ProgramsSection({ onEnquire }) {
   return (
@@ -22,6 +22,11 @@ export default function ProgramsSection({ onEnquire }) {
               <div className="prog-card__main">
                 <h3 className="prog-card__title">{p.title}</h3>
                 <p className="prog-card__desc">{p.description}</p>
+                {p.timing && (
+                  <div className="prog-card__timing" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.82rem', color: 'var(--primary)', fontWeight: '600', background: 'rgba(29, 95, 214, 0.08)', padding: '4px 10px', borderRadius: '6px', marginBottom: '1.25rem' }}>
+                    <FaClock style={{ flexShrink: 0 }} /> <span>{p.timing}</span>
+                  </div>
+                )}
                 <div className="prog-card__actions">
                   <button className="btn btn--primary" onClick={() => onEnquire(p.title)}>Enquire Now <FaArrowRight /></button>
                 </div>

@@ -52,13 +52,6 @@ export default function FacultyPage() {
           <Link to="/" className="wt-back-link">
             <FaArrowLeft /> Back to Home
           </Link>
-          <div className="faculty-hero__content">
-            <span className="eyebrow"><FaChalkboardTeacher /> Faculty &amp; Staff Directory</span>
-            <h1 className="faculty-hero__title">Meet Our <em>Expert Faculty &amp; Staff</em></h1>
-            <p className="faculty-hero__desc">
-              Dedicated educators, subject specialists, and administration staff working together to nurture student potential from 5th to 12th standard.
-            </p>
-          </div>
         </div>
       </section>
 

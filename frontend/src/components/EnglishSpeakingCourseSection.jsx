@@ -40,31 +40,35 @@ export default function EnglishSpeakingCourseSection({ onEnquire }) {
                 <FaMoneyBillWave /> Fee Structure
               </div>
               <div className="eng-card__body">
+                <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.6rem', borderBottom: '2px solid var(--border)', fontWeight: '700', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-muted)' }}>
+                  <span>Plan</span>
+                  <span>Fee</span>
+                </div>
                 <div className="eng-fee-row">
                   <span className="eng-fee-label">Monthly</span>
-                  <span className="eng-fee-value">₹999</span>
+                  <span className="eng-fee-value">₹999<small style={{ fontSize: '0.75rem', fontWeight: '500', color: 'var(--text-muted)' }}>/month</small></span>
                 </div>
                 <div className="eng-fee-row">
-                  <span className="eng-fee-label">6 Months (Installments)</span>
-                  <span className="eng-fee-value">₹9,000</span>
-                </div>
-                <div className="eng-fee-row">
-                  <span className="eng-fee-label">6 Months (One-time)</span>
+                  <span className="eng-fee-label">6 Months – One Time</span>
                   <span className="eng-fee-value eng-fee-value--save">₹6,000 <small>Save ₹3,000</small></span>
                 </div>
                 <div className="eng-fee-row">
-                  <span className="eng-fee-label">Yearly (Installments)</span>
-                  <span className="eng-fee-value">₹12,000</span>
+                  <span className="eng-fee-label">6 Months – Installments</span>
+                  <span className="eng-fee-value">₹9,000</span>
                 </div>
                 <div className="eng-fee-row eng-fee-row--best">
-                  <span className="eng-fee-label">Yearly (One-time) <span className="eng-best-badge">BEST VALUE</span></span>
+                  <span className="eng-fee-label">1 Year – One Time <span className="eng-best-badge">BEST VALUE</span></span>
                   <span className="eng-fee-value eng-fee-value--save">₹9,000 <small>Save ₹3,000</small></span>
                 </div>
                 <div className="eng-fee-row">
-                  <span className="eng-fee-label">Admission Fees</span>
-                  <span className="eng-fee-value">₹999</span>
+                  <span className="eng-fee-label">1 Year – Installments</span>
+                  <span className="eng-fee-value">₹12,000</span>
                 </div>
-                <p className="eng-fee-note">Notes (₹600), Bag (₹300), T-Shirt (₹300)</p>
+                <div style={{ marginTop: '0.85rem', paddingTop: '0.85rem', borderTop: '1px dashed var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.88rem' }}>
+                  <span style={{ fontWeight: '600', color: 'var(--text-main)' }}>Admission Fee (One-Time)</span>
+                  <span style={{ fontWeight: '700', color: 'var(--primary)' }}>₹999</span>
+                </div>
+                <p className="eng-fee-note" style={{ marginTop: '0.5rem' }}>* Notes (₹600), Bag (₹300), T-Shirt (₹300) available at the institute.</p>
               </div>
             </div>
 
@@ -79,7 +83,7 @@ export default function EnglishSpeakingCourseSection({ onEnquire }) {
                   <li><FaCheckCircle className="eng-check" /> Daily conversational practice</li>
                   <li><FaCheckCircle className="eng-check" /> Professional & experienced trainers</li>
                   <li><FaCheckCircle className="eng-check" /> Learn with Prof. Satish</li>
-                  <li><FaCheckCircle className="eng-check" /> Small batch sizes for personal attention</li>
+                  <li><FaCheckCircle className="eng-check" /> Limited batch sizes with personal attention</li>
                   <li><FaCheckCircle className="eng-check" /> Grammar, vocabulary & pronunciation</li>
                 </ul>
                 <button

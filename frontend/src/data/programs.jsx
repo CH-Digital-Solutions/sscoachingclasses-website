@@ -1,10 +1,11 @@
-﻿import { FaBook, FaGraduationCap, FaFlask, FaPaintBrush } from 'react-icons/fa';
+import { FaBook, FaGraduationCap, FaFlask, FaPaintBrush } from 'react-icons/fa';
 
 export const programs = [
   {
     id: 'school',
     title: 'School Section',
     subtitle: '5th to 10th',
+    timing: 'Afternoon (3:00 PM – 6:00 PM) | Sun (10:00 AM – 1:00 PM)',
     description: 'Comprehensive preparation for classes 5th to 10th in Hindi, Semi-English, and English medium. Regular & private students welcome.',
     features: [
       'Hindi, Semi-English & English medium',
@@ -20,6 +21,7 @@ export const programs = [
     id: 'commerce',
     title: 'Commerce',
     subtitle: '11th & 12th',
+    timing: 'Evening (6:00 PM – 9:30 PM, Mon – Sat)',
     description: 'Focused HSC coaching for Commerce stream with expert faculty and board-focused preparation.',
     features: [
       'Commerce stream',
@@ -35,6 +37,7 @@ export const programs = [
     id: 'arts',
     title: 'Arts',
     subtitle: '11th & 12th',
+    timing: 'Flexible Morning & Evening Batches',
     description: 'Complete Arts stream coaching for 11th & 12th with subject-specialist teachers and structured study plans.',
     features: [
       'Arts stream',
@@ -50,6 +53,7 @@ export const programs = [
     id: 'science',
     title: 'Science',
     subtitle: '11th & 12th',
+    timing: 'Regular Morning & Evening Batches',
     description: 'Rigorous Science stream coaching for 11th & 12th with lab-oriented and concept-based learning approach.',
     features: [
       'Science stream',
